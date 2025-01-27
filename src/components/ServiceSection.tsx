@@ -14,7 +14,7 @@ export default function ServiceSection() {
   return (
     <section className="relative bg-fixed flex flex-col my-10 items-center  justify-center w-full py-24 bg-gradient-to-b  from-white to-[#1600000c]">
       {/* Background Image with Opacity */}
-      <div className="absolute  inset-0 bg-[url('/pictures/servicesBg.png')] bg-fixed bg-cover bg-top "></div>
+      <div className="absolute  inset-0 bg-[url('/pictures/servicesBg.png')]  bg-cover bg-no-repeat bg-top "></div>
       <div className="absolute inset-0 pointer-events-none"> </div>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
