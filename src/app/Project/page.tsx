@@ -66,7 +66,7 @@ export default function Project() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}>
             <h2 className="text-4xl font-bold text-white mb-6">
-              Let's Build Your Future Together
+              Let&apos;s Build Your Future Together
             </h2>
             <p className="text-white mb-8 max-w-2xl mx-auto">
               Whether you&apos;re planning a new project, renovating an existing
