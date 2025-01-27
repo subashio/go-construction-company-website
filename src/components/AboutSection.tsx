@@ -1,20 +1,8 @@
 "use client";
-<<<<<<< HEAD
-import { motion } from "framer-motion";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-
-const counts = [
-  { count: "100%", description: "Satisfied Clients", prefix: "" },
-  { count: "100", description: "Skilled Workers", prefix: "+" },
-  { count: "40", description: "Projects Completed", prefix: "+" },
-];
-
-=======
 import { counts } from "@/constants/common";
 import { motion } from "framer-motion";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 
->>>>>>> 49b8e3e (updated/pages)
 export default function AboutSection() {
   return (
     <section className="relative py-20 overflow-hidden">
@@ -58,11 +46,7 @@ export default function AboutSection() {
             </div>
 
             {/* Stats Grid */}
-<<<<<<< HEAD
-            <div className="grid grid-cols-3 gap-8">
-=======
             <div className="sm:grid sm:grid-cols-3 flex flex-col gap-4  sm:gap-8">
->>>>>>> 49b8e3e (updated/pages)
               {counts.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -72,13 +56,6 @@ export default function AboutSection() {
                   className="relative group">
                   <div className="absolute inset-0 bg-yellow-100/40 rounded-lg transform  group-hover:rotate-0 transition-transform duration-300" />
                   <div className="relative p-2 gap-1.5  flex flex-col items-center">
-<<<<<<< HEAD
-                    <div className="  font-bold text-lg  xl:text-xl text-gray-900">
-                      {stat.count}
-                      <span className="text-yellow-600">{stat.prefix}</span>
-                    </div>
-                    <p className="text-xs xl:text-sm  text-gray-600 mt-1">
-=======
                     <div className="  font-bold text-lg flex items-center  xl:text-xl text-gray-900">
                       {stat.count}
                       <span className="text-yellow-600 mb-1">
@@ -86,7 +63,6 @@ export default function AboutSection() {
                       </span>
                     </div>
                     <p className="text-xs xl:text-sm  text-gray-600 ">
->>>>>>> 49b8e3e (updated/pages)
                       {stat.description}
                     </p>
                   </div>

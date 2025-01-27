@@ -1,42 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import { useState, useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button"; // shadcn button
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
-import BoxReveal from "./ui/box-reveal";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-
-const MotionMaxWidthWrapper = motion.create(MaxWidthWrapper);
-
-const slides = [
-  {
-    id: 1,
-    name: "Home",
-    title: "Get Your Dream Home Done",
-    description:
-      "Specializing in individual house construction, we provide full support, ensuring seamless design, planning, and execution for your dream home. 20+ Years Of Experience in This industry.",
-    image: "/pictures/herobg-2.png",
-  },
-  {
-    id: 2,
-    name: "Home 2",
-    title: "Get Your Dream Home Done",
-    description:
-      "Specializing in individual house construction, we provide full support, ensuring seamless design, planning, and execution for your dream home. 20+ Years Of Experience in This industry.",
-    image: "/pictures/hero-bg-2.png",
-  },
-  {
-    id: 3,
-    name: "Home 3",
-    title: "Get Your Dream Home Done",
-    description:
-      "Specializing in individual house construction, we provide full support, ensuring seamless design, planning, and execution for your dream home. 20+ Years Of Experience in This industry.",
-    image: "/pictures/hero-bg.png",
-  },
-];
-
-=======
 import { Button } from "@/components/ui/button"; // shadcn button
 import { heroSliders } from "@/constants/common";
 import { AnimatePresence, motion } from "framer-motion";
@@ -54,7 +16,6 @@ import BoxReveal from "./ui/box-reveal";
 
 const MotionMaxWidthWrapper = motion.create(MaxWidthWrapper);
 
->>>>>>> 49b8e3e (updated/pages)
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -65,11 +26,7 @@ export default function HeroSection() {
   const duration = 5000; // 5 seconds
 
   const nextSlide = () => {
-<<<<<<< HEAD
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-=======
     setCurrentSlide((prev) => (prev + 1) % heroSliders.length);
->>>>>>> 49b8e3e (updated/pages)
     setProgress(0); // Reset progress
   };
 
@@ -96,15 +53,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full h-screen">
-<<<<<<< HEAD
-      {/* Slides */}
-      <div className="overflow-hidden  relative h-full">
-        <AnimatePresence>
-          <motion.img
-            key={slides[currentSlide].id}
-            src={slides[currentSlide].image}
-            alt={slides[currentSlide].name}
-=======
       {/* HeroSliders */}
       <div className="absolute inset-0  bg-black/50 opacity-70 z-20" />
       <div className="overflow-hidden  relative h-full">
@@ -113,7 +61,6 @@ export default function HeroSection() {
             key={heroSliders[currentSlide].id}
             src={heroSliders[currentSlide].image}
             alt={heroSliders[currentSlide].name}
->>>>>>> 49b8e3e (updated/pages)
             className="absolute top-0 left-0 w-full h-full object-cover"
             initial={{
               scale: 1, // Start at the original size
@@ -139,32 +86,15 @@ export default function HeroSection() {
               duration: 0.5,
               ease: "easeInOut",
             }}
-<<<<<<< HEAD
-            key={`content-${slides[currentSlide].id}`}
-            className="flex flex-col gap-6 justify-center items-start min-h-screen w-full">
-            <BoxReveal boxColor="#ffffff" duration={0.4}>
-              <h1 className="font-bold text-5xl sm:text-7xl max-w-screen-sm leading-snug text-white w-full">
-                {slides[currentSlide].title}
-=======
             key={`content-${heroSliders[currentSlide].id}`}
             className="flex flex-col gap-6 justify-center items-start min-h-screen w-full">
             <BoxReveal boxColor="#ffffff" duration={0.4}>
               <h1 className="font-bold text-5xl sm:text-7xl  max-w-screen-sm leading-snug text-white w-full">
                 {heroSliders[currentSlide].title}
->>>>>>> 49b8e3e (updated/pages)
               </h1>
             </BoxReveal>
             <BoxReveal boxColor="#ffffff" duration={0.4}>
               <p className="font-normal text-sm max-w-screen-sm text-orange-50 w-full">
-<<<<<<< HEAD
-                {slides[currentSlide].description}
-              </p>
-            </BoxReveal>
-            <BoxReveal boxColor="#ffffff" duration={0.4}>
-              <Button variant="secondary" className="mr-auto">
-                See Our Works
-              </Button>
-=======
                 {heroSliders[currentSlide].description}
               </p>
             </BoxReveal>
@@ -180,50 +110,33 @@ export default function HeroSection() {
                 Explore Projects
                 <ArrowUpRight className=" h-0 w-0 opacity-0 group-hover:opacity-100  group-hover:w-4 group-hover:h-4  group-hover:rotate-45 transition-all duration-500 group-hover:translate-x-4" />
               </Link>
->>>>>>> 49b8e3e (updated/pages)
             </BoxReveal>
           </MotionMaxWidthWrapper>
         </AnimatePresence>
       </div>
 
       {/* Navigation */}
-<<<<<<< HEAD
-      <div className="absolute bottom-4 left-0 right-0 flex lg:flex-row flex-col lg:items-center justify-between items-start px-4">
-=======
       <div className="absolute z-30 bottom-4 left-0 right-0 flex lg:flex-row flex-col lg:items-center justify-between items-start px-4">
->>>>>>> 49b8e3e (updated/pages)
         {/* Arrows for smaller screens */}
         <div className="flex justify-between mb-4 w-full lg:hidden">
           <button
             className="block lg:hidden p-4 rounded-full text-white"
             onClick={() =>
-<<<<<<< HEAD
-              goToSlide((currentSlide - 1 + slides.length) % slides.length)
-=======
               goToSlide(
                 (currentSlide - 1 + heroSliders.length) % heroSliders.length
               )
->>>>>>> 49b8e3e (updated/pages)
             }>
             <ChevronLeft className="w-8 h-8" /> {/* Left Arrow */}
           </button>
           <button
             className="block lg:hidden p-4 rounded-full text-white"
-<<<<<<< HEAD
-            onClick={() => goToSlide((currentSlide + 1) % slides.length)}>
-=======
             onClick={() => goToSlide((currentSlide + 1) % heroSliders.length)}>
->>>>>>> 49b8e3e (updated/pages)
             <ChevronRight className="w-8 h-8" /> {/* Right Arrow */}
           </button>
         </div>
         {/* Navigation Buttons for large screens */}
         <MaxWidthWrapper className="hidden lg:flex gap-4 items-center">
-<<<<<<< HEAD
-          {slides.map((slide, index) => (
-=======
           {heroSliders.map((slide, index) => (
->>>>>>> 49b8e3e (updated/pages)
             <div key={slide.id} className="relative">
               {/* Progress Line */}
               <div

@@ -1,8 +1,5 @@
 "use client";
-<<<<<<< HEAD
-=======
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
->>>>>>> 49b8e3e (updated/pages)
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,16 +8,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-<<<<<<< HEAD
-import { motion } from "framer-motion";
-
-export default function Page() {
-  return (
-    <section className="flex flex-col">
-      {/* Hero Section */}
-      <div
-        className="relative h-[20vh] lg:h-[30vh] bg-cover bg-center"
-=======
 import { buttonVariants } from "@/components/ui/button";
 import { whyGo } from "@/constants/common";
 import { cn } from "@/lib/utils";
@@ -34,19 +21,13 @@ export default function Page() {
       {/* Hero Section */}
       <section
         className="relative h-[20vh] sm:h-[25vh] bg-cover bg-center"
->>>>>>> 49b8e3e (updated/pages)
         style={{ backgroundImage: `url(/pictures/about-bg.jpg)` }}>
         {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-70" />
 
         {/* Content */}
-<<<<<<< HEAD
-        <div className="relative z-20 flex flex-col h-full items-start gap-2 justify-center px-6 lg:px-12">
-          <h1 className="text-white text-3xl md:text-4xl font-bold">
-=======
         <MaxWidthWrapper className="relative z-20 flex flex-col h-full items-start gap-4 justify-center px-6 lg:px-12">
           <h1 className="text-white text-3xl sm:text-5xl font-semibold">
->>>>>>> 49b8e3e (updated/pages)
             About Us
           </h1>
           <Breadcrumb className="z-20  ">
@@ -66,26 +47,6 @@ export default function Page() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-<<<<<<< HEAD
-        </div>
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="px-6 lg:px-12 mt-8">
-        <div className="flex items-center gap-4">
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "3rem" }}
-            transition={{ duration: 0.8 }}
-            className="h-0.5 bg-gradient-to-r from-yellow-600 to-yellow-400"
-          />
-          <span className="text-yellow-700 text-sm md:text-base font-medium tracking-wider uppercase">
-            Why Choose Us
-          </span>
-        </div>
-      </div>
-    </section>
-=======
         </MaxWidthWrapper>
       </section>
 
@@ -238,6 +199,5 @@ export default function Page() {
         </div>
       </section>
     </div>
->>>>>>> 49b8e3e (updated/pages)
   );
 }

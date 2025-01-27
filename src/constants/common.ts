@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-export const navLink2 = [
-  {
-    name: "Home",
-    href: "#",
-    className: "text-white/80 hover:text-orange-400",
-  },
-  {
-    name: "About",
-    href: "#",
-    className: "text-white/80 hover:text-orange-400",
-  },
-  {
-    name: "Project",
-    href: "#",
-    className: "text-white/80 hover:text-orange-400",
-=======
 export const navLinks = [
   {
     name: "Home",
@@ -279,6 +262,5 @@ export const whyGo = [
     description:
       "We prioritize eco-friendly practices and innovative techniques to create future-ready spaces.",
     icon: "🌿",
->>>>>>> 49b8e3e (updated/pages)
   },
 ];

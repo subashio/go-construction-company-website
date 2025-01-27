@@ -1,52 +1,9 @@
-<<<<<<< HEAD
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import Image from "next/image";
-import { Button } from "./ui/button";
-=======
 "use client";
 import { motion } from "framer-motion";
->>>>>>> 49b8e3e (updated/pages)
 
 interface ProjectCardProps {
   title: string;
   description: string;
-<<<<<<< HEAD
-  image: string;
-}
-export default function ProjectCard({
-  title,
-  description,
-  image,
-}: ProjectCardProps) {
-  return (
-    <Card className="!p-0  rounded-md border-none">
-      <CardHeader className="p-0 ">
-        <Image
-          src={image}
-          width={400}
-          height={100}
-          className="w-full object-contain  object-center rounded-t-lg"
-          alt="Services card image for go construction"
-        />
-      </CardHeader>
-      <CardContent className="flex flex-col mt-4  p-0 gap-y-2 ">
-        <CardTitle className="font-bold text-xl">
-          {title} <span className="text-xs font-normal"> (1,200 sq ft)</span>
-        </CardTitle>
-        <CardDescription className="max-w-sm text-xs mb-4">
-          {description}
-        </CardDescription>
-        <Button> View Project</Button>
-      </CardContent>
-    </Card>
-=======
   category: string;
   image: string;
   index: number;
@@ -87,6 +44,5 @@ export default function ProjectCard({
         </p>
       </div>
     </motion.div>
->>>>>>> 49b8e3e (updated/pages)
   );
 }

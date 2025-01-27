@@ -33,14 +33,10 @@ export const BoxReveal = ({
   }, [isInView, mainControls, slideControls]);
 
   return (
-<<<<<<< HEAD
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
-=======
     <div
       className="z-30"
       ref={ref}
       style={{ position: "relative", width, overflow: "hidden" }}>
->>>>>>> 49b8e3e (updated/pages)
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

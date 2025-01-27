@@ -11,21 +11,7 @@ import React from "react";
 
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-<<<<<<< HEAD
-
-const bannerList = [
-  {
-    to: "/",
-    image: "/pictures/civil.png",
-  },
-  {
-    to: "/",
-    image: "/pictures/civil.png",
-  },
-];
-=======
 import { adBannerList } from "@/constants/common";
->>>>>>> 49b8e3e (updated/pages)
 
 export default function BannerSection() {
   const plugin = React.useRef(
@@ -61,11 +47,7 @@ export default function BannerSection() {
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}>
         <CarouselContent className="my-2  flex h-[30vh] md:h-[35vh] w-full gap-2  !rounded-lg ">
-<<<<<<< HEAD
-          {bannerList.map((_item, index) => (
-=======
           {adBannerList.map((_item, index) => (
->>>>>>> 49b8e3e (updated/pages)
             <CarouselItem className="relative h-full w-full" key={index}>
               <Link href={_item.to} className="block h-full w-full">
                 <div

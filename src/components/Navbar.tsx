@@ -1,9 +1,6 @@
 "use client";
 
-<<<<<<< HEAD
-=======
 import { navLinks } from "@/constants/common";
->>>>>>> 49b8e3e (updated/pages)
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Link from "next/link";
@@ -18,37 +15,6 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 
-<<<<<<< HEAD
-const navLinks = [
-  {
-    name: "Home",
-    href: "/",
-    className: " hover:text-orange-400 transition-colors duration-300",
-  },
-  {
-    name: "About",
-    href: "/About",
-    className: " hover:text-orange-400 transition-colors duration-300",
-  },
-  {
-    name: "Project",
-    href: "#",
-    className: " hover:text-orange-400 transition-colors duration-300",
-  },
-  // {
-  //   name: "Contact",
-  //   href: "#",
-  //   className: cn(
-  //     buttonVariants({
-  //       className:
-  //         "bg-red-900/90 hover:bg-red-800 text-white w-24 h-8 transition-all duration-300",
-  //     })
-  //   ),
-  // },
-];
-
-=======
->>>>>>> 49b8e3e (updated/pages)
 export default function Navbar({
   textColor,
   image,
@@ -72,10 +38,6 @@ export default function Navbar({
         // Scrolling up
         setIsHidden(false);
       }
-<<<<<<< HEAD
-
-=======
->>>>>>> 49b8e3e (updated/pages)
       // Add background and shadow when scrolled
       setIsScrolled(scrollY > 50);
 
@@ -132,20 +94,12 @@ export default function Navbar({
             </li>
           ))}
           <Link
-<<<<<<< HEAD
-            href="#"
-=======
             href="/Contact"
->>>>>>> 49b8e3e (updated/pages)
             className={cn(
               buttonVariants({
                 variant: "default",
                 className:
-<<<<<<< HEAD
-                  " bg-gradient-to-r from-red-900 to-red-700  hover:bg-red-800 text-white w-24 h-9 transition-all duration-300 hover:scale-105 ",
-=======
                   " bg-gradient-to-r from-red-900 to-red-700  hover:bg-red-800 text-white w-28 h-9 transition-all duration-300 hover:scale-105 rounded-full ",
->>>>>>> 49b8e3e (updated/pages)
               })
             )}>
             Contact Us
@@ -183,13 +137,8 @@ export default function Navbar({
             <div className="border-t flex flex-col items-center gap-6 py-8 mt-4">
               <h1 className="text-xl font-bold">Ready to work together?</h1>
               <Link
-<<<<<<< HEAD
-                href="#"
-                className="flex items-center h-10 px-6 bg-gradient-to-r from-red-900 to-red-700 text-white hover:bg-red-800 hover:scale-105 transition-all duration-300 rounded-lg shadow-md">
-=======
                 href="/Contact"
                 className="flex items-center h-10 px-6 bg-gradient-to-r from-red-900 to-red-700 text-white hover:bg-red-800 hover:scale-105 transition-all duration-300 rounded-full shadow-md">
->>>>>>> 49b8e3e (updated/pages)
                 Contact us
               </Link>
             </div>
