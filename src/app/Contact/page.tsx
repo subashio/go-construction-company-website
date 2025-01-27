@@ -35,7 +35,7 @@ const FormSchema = z.object({
     message: "Message must be at least 10 characters.",
   }),
 });
-export default function page() {
+export default function Contact() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -45,7 +45,6 @@ export default function page() {
       message: "",
     },
   });
-
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log(data);
     // try {
@@ -71,7 +70,9 @@ export default function page() {
         <img src="/pictures/contact-img.jpg" alt="" />
       </div>
       <div className=" flex flex-col gap-2">
-        <h1 className="text-3xl md:text-4xl font-bold">Let's Get In Touch.</h1>
+        <h1 className="text-3xl md:text-4xl font-bold">
+          Let&apos;s Get In Touch.
+        </h1>
         <p className="text-sm">
           Or just reach out manually to
           <span className="text-blue-700"> info@goconstruction.com </span>{" "}

@@ -59,9 +59,9 @@ export default function ProjectSection() {
         <motion.div
           className="absolute top-1/4 lg:left-[55%] md:left-1/2 sm:left-10 -left-1 -translate-y-1/2 flex gap-8 px-6 lg:px-16"
           style={{ x }}>
-          {ProjectCardItems.map((project, index) => (
+          {ProjectCardItems.map((project) => (
             <ProjectCard
-              index={index + 1}
+              key={project.id}
               category={project.category}
               title={project.title}
               description={project.description}

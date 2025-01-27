@@ -6,18 +6,18 @@ interface ProjectCardProps {
   description: string;
   category: string;
   image: string;
-  index: number;
+  key: number;
 }
 export default function ProjectCard({
   title,
   category,
   description,
   image,
-  index,
+  key,
 }: ProjectCardProps) {
   return (
     <motion.div
-      key={index}
+      key={key}
       className="group relative flex-shrink-0 w-[28rem] h-[30rem] lg:w-[32rem] lg:h-[36rem] overflow-hidden rounded-xl
       bg-white shadow-lg hover:shadow-xl transition-all duration-300"
       whileHover={{ y: -10 }}>

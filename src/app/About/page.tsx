@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Page() {
+export default function About() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -177,10 +177,10 @@ export default function Page() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}>
             <h2 className="text-4xl font-bold text-white mb-6">
-              Let's Build Your Future Together
+              Let&apos;s Build Your Future Together
             </h2>
             <p className="text-white mb-8 max-w-2xl mx-auto">
-              Whether you're planning a new project, renovating an existing
+              Whether you&apos;re planning a new project, renovating an existing
               space, or maintaining your property, GoConstruction is your
               trusted partner.
             </p>

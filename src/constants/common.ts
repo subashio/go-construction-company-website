@@ -167,12 +167,14 @@ export const heroSliders = [
 
 export const ProjectCardItems = [
   {
+    id: 1,
     title: "Luxurious Villas",
     category: "Premium Residential",
     description: "Exclusive properties that redefine luxury living standards",
     image: "/pictures/p-5.jpeg",
   },
   {
+    id: 2,
     title: "Individual House",
     category: "Residential",
     description:
@@ -180,6 +182,7 @@ export const ProjectCardItems = [
     image: "/pictures/p-4.jpg",
   },
   {
+    id: 3,
     title: "Individual House",
     category: "Residential",
     description:
@@ -187,6 +190,7 @@ export const ProjectCardItems = [
     image: "/pictures/p-3.0.JPG",
   },
   {
+    id: 4,
     title: "Individual House",
     category: "Residential",
     description:
@@ -242,13 +246,13 @@ export const whyGo = [
   {
     title: "Comprehensive Expertise",
     description:
-      "No matter the project's scope or size, we've got the skills, tools, and experience to deliver exceptional results.",
+      "No matter the project&apos;s scope or size, we&apos;ve got the skills, tools, and experience to deliver exceptional results.",
     icon: "🏗️",
   },
   {
     title: "Quality & Precision",
     description:
-      "We're committed to maintaining the highest standards of craftsmanship and attention to detail.",
+      "We&apos;re committed to maintaining the highest standards of craftsmanship and attention to detail.",
     icon: "✨",
   },
   {

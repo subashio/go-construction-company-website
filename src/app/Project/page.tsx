@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function page() {
+export default function Project() {
   return (
     <div className="relative flex flex-col ">
       {/* Hero Section */}
@@ -69,7 +69,7 @@ export default function page() {
               Let's Build Your Future Together
             </h2>
             <p className="text-white mb-8 max-w-2xl mx-auto">
-              Whether you're planning a new project, renovating an existing
+              Whether you&apos;re planning a new project, renovating an existing
               space, or maintaining your property, GoConstruction is your
               trusted partner.
             </p>
