@@ -1,6 +1,6 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { cn } from "@/lib/utils";
 
 export default function CtaSection() {
   return (
@@ -21,7 +21,7 @@ export default function CtaSection() {
           Contact Us Today
         </Link>
         <p className="text-xs z-10 ">
-          For Enquiries call: 91+ 9344434342 / 7058321234
+          For Enquiries call: 91+ 9443956135 / 7904656924
         </p>
       </div>
     </section>

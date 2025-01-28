@@ -110,34 +110,6 @@ export const adBannerList = [
   },
 ];
 
-export const footerLinks = [
-  {
-    title: "Quick Links",
-    links: [
-      { href: "#", label: "Home" },
-      { href: "#", label: "Services" },
-      { href: "#", label: "Projects" },
-      { href: "#", label: "Contact" },
-    ],
-  },
-
-  {
-    title: "Contact",
-    links: [
-      { href: "tel:+919443956135", label: "91+ 9443956135" },
-      {
-        href: "mailto:info@goconstruction.com",
-        label: "info@goconstruction.com",
-      },
-      {
-        href: "#",
-        label:
-          "No,42 ganapathy nagar 2nd cross, moolakualam, Puducherry 605110",
-      },
-    ],
-  },
-];
-
 export const heroSliders = [
   {
     id: 1,
@@ -187,7 +159,7 @@ export const ProjectCardItems = [
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-3.0.JPG",
+    image: "/pictures/p-2.jpg",
   },
   {
     id: 4,
@@ -195,7 +167,7 @@ export const ProjectCardItems = [
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-2.jpg",
+    image: "/pictures/p-6.jpg",
   },
 ];
 
@@ -213,32 +185,56 @@ export const ProjectPageCardItems = [
       "Modern living spaces crafted with precision and sustainability in mind",
     image: "/pictures/p-4.jpg",
   },
+
   {
-    title: "Civil Work",
-    category: "Infrastructure",
-    description: "Large-scale infrastructure projects that shape communities",
-    image: "/pictures/p-3.0.JPG",
-  },
-  {
-    title: "Structural Work",
-    category: "Commercial",
+    title: "Individual House",
+    category: "Residential",
     description:
-      "Innovative structural solutions for complex architectural challenges",
+      "Modern living spaces crafted with precision and sustainability in mind",
     image: "/pictures/p-5.jpg",
   },
   {
-    title: "Structural Work",
-    category: "Commercial",
+    title: "Individual House",
+    category: "Residential",
     description:
-      "Innovative structural solutions for complex architectural challenges",
+      "Modern living spaces crafted with precision and sustainability in mind",
     image: "/pictures/p-2.jpg",
   },
   {
-    title: "Structural Work",
+    title: "Individual House",
+    category: "Residential",
+    description:
+      "Modern living spaces crafted with precision and sustainability in mind",
+    image: "/pictures/p-3.jpg",
+  },
+  {
+    title: "Individual House",
+    category: "Residential",
+    description:
+      "Modern living spaces crafted with precision and sustainability in mind",
+    image: "/pictures/p-6.jpg",
+  },
+
+  {
+    title: "Individual House",
+    category: "Residential",
+    description:
+      "Modern living spaces crafted with precision and sustainability in mind",
+    image: "/pictures/p-8.jpg",
+  },
+  {
+    title: "Individual House",
+    category: "Residential",
+    description:
+      "Modern living spaces crafted with precision and sustainability in mind",
+    image: "/pictures/p-9.JPG",
+  },
+  {
+    title: "Appartment",
     category: "Commercial",
     description:
       "Innovative structural solutions for complex architectural challenges",
-    image: "/pictures/p-3.jpg",
+    image: "/pictures/p-7.jpg",
   },
 ];
 

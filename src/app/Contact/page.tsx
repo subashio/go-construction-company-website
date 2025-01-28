@@ -17,25 +17,39 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
+import Link from "next/link";
 
 const ContactCardList = [
   {
     icon: <Mail className="  w-6 h-6 text-yellow-900 " />,
     title: "Email Support",
     description: "Our team can respond in real time",
-    info: "info.goconstruction.in",
+    info: "info@goconstruction.in",
+    href: "mailto:info@goconstruction.in",
   },
   {
     icon: <Building2 className="  w-6 h-6 text-yellow-900 " />,
     title: "Visit Our Office",
     description: "Visit our location in real life",
     info: "42,ganapthy nagar 2nd cross arupathapuram puducherry",
+    href: "#",
   },
   {
     icon: <Phone className="  w-6 h-6 text-yellow-900 " />,
     title: "Call Us Directly",
     description: "Available during working hours",
-    info: "+91 9443956135 / 7904656924",
+    info: (
+      <span className="flex gap-1">
+        <Link href="tel:+919443956135" className="text-blue-700">
+          +91 94439 56135
+        </Link>
+        /
+        <Link href="tel:+917904656924" className="text-blue-700">
+          +91 79046 56924
+        </Link>
+      </span>
+    ),
+    href: "#", // Primary number for the clickable tel: link
   },
 ];
 
@@ -196,9 +210,6 @@ export default function Contact() {
             </Form>
           </div>
         </MaxWidthWrapper>
-        {/* <div className="">
-          <img src="/pictures/contact-img.jpg" alt="" />
-          </div> */}
       </div>
       <MaxWidthWrapper className="w-full flex flex-col items-center my-10">
         <h1 className="text-3xl md:text-4xl mb-2 font-bold">
@@ -221,7 +232,9 @@ export default function Contact() {
                 <h1 className="font-bold text-lg">{item.title}</h1>
                 <p className="">{item.description}</p>
               </div>
-              <p className="text-sm text-blue-700">{item.info}</p>
+              <Link href={item.href} className="text-sm text-blue-700">
+                {item.info}
+              </Link>
             </div>
           ))}
         </div>

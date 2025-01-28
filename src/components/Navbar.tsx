@@ -4,6 +4,7 @@ import { navLinks } from "@/constants/common";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { buttonVariants } from "./ui/button";
@@ -25,7 +26,9 @@ export default function Navbar({
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const location = usePathname();
 
+  const isHomePage = location === "/";
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -57,6 +60,28 @@ export default function Navbar({
           : "bg-transparent",
         isHidden ? "-translate-y-full" : "translate-y-0"
       )}>
+      {/* Top Header for Daily Updates */}
+      {!isScrolled && isHomePage && (
+        <div
+          className={cn(
+            "w-full bg-black/50 backdrop-blur-xl text-white text-sm font-medium p-2",
+            "flex items-center justify-center overflow-hidden"
+          )}>
+          <div className="whitespace-nowrap animate-marquee ">
+            <p className="bg-gradient-to-r  from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
+              ⭐ Daily Updates: Amazing houses for sale! Contact us today for
+              the best deals. Contact us
+              <span className="mx-2   text-white/80">
+                <Link href="/Contact" className="hover:underline">
+                  Click Here
+                </Link>
+              </span>
+              or visit our website! ⭐
+            </p>
+          </div>
+        </div>
+      )}
+
       <MaxWidthWrapper className="flex items-center h-20 justify-between">
         {isScrolled ? (
           <Link href="/">

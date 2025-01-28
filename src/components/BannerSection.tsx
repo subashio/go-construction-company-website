@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 
+import { adBannerList } from "@/constants/common";
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import { adBannerList } from "@/constants/common";
 
 export default function BannerSection() {
   const plugin = React.useRef(
@@ -39,14 +39,14 @@ export default function BannerSection() {
   };
 
   return (
-    <MaxWidthWrapper className="mt-20">
+    <MaxWidthWrapper className="mt-10">
       <Carousel
         setApi={setApi}
         plugins={[plugin.current]}
         className="relative"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}>
-        <CarouselContent className="my-2  flex h-[30vh] md:h-[35vh] w-full gap-2  !rounded-lg ">
+        <CarouselContent className="my-2  flex h-[35vh] md:h-[40vh] w-full gap-2  !rounded-lg ">
           {adBannerList.map((_item, index) => (
             <CarouselItem className="relative h-full w-full" key={index}>
               <Link href={_item.to} className="block h-full w-full">

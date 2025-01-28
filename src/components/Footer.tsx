@@ -1,5 +1,6 @@
 "use client";
-import { footerLinks } from "@/constants/common";
+// import { footerLinks } from "@/constants/common";
+import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const socialIcons = [
@@ -54,6 +55,50 @@ const socialIcons = [
     ),
   },
 ];
+export const footerLinks = [
+  {
+    title: "Quick Links",
+    links: [
+      { href: "#", label: "Home" },
+      { href: "#", label: "Services" },
+      { href: "#", label: "Projects" },
+      { href: "#", label: "Contact" },
+    ],
+  },
+
+  {
+    title: "Contact",
+    links: [
+      {
+        href: "#",
+        label: (
+          <span className="flex gap-1 flex-wrap">
+            <Link
+              href="tel:+919443956135"
+              className="text-gray-50 px-0.5 hover:text-red-500 transition-colors">
+              +91 94439 56135
+            </Link>
+            /
+            <Link
+              href="tel:+917904656924"
+              className="text-gray-50 px-1 hover:text-red-500 transition-colors">
+              +91 79046 56924
+            </Link>
+          </span>
+        ),
+      },
+      {
+        href: "mailto:info@goconstruction.in",
+        label: "info@goconstruction.in",
+      },
+      {
+        href: "#",
+        label:
+          "No,42 ganapathy nagar 2nd cross, moolakualam, Puducherry 605110",
+      },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
@@ -81,11 +126,11 @@ export default function Footer() {
             <ul className="space-y-2">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-gray-50 hover:text-red-500 transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -97,12 +142,12 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-4   pb-2">Connect With Us</h4>
           <div className="flex space-x-4 mb-4">
             {socialIcons.map((social, index) => (
-              <a
+              <Link
                 key={index}
                 href={social.href}
                 className="text-gray-50 hover:text-red-500 transition-colors">
                 {social.icon}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
