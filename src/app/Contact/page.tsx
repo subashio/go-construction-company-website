@@ -12,6 +12,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { PhoneInput } from "@/components/ui/phone-input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { sendContactForm } from "@/lib/api";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Building2, Loader, Mail, Phone } from "lucide-react";
 import Link from "next/link";
@@ -34,21 +36,16 @@ const ContactCardList = [
     href: "#",
   },
   {
-    icon: <Phone className="  w-6 h-6 text-yellow-900 " />,
+    icon: <Phone className="w-6 h-6 text-yellow-900" />,
     title: "Call Us Directly",
     description: "Available during working hours",
     info: (
-      <span className="flex gap-1">
-        <Link href="tel:+919443956135" className="text-blue-700">
-          +91 94439 56135
-        </Link>
-        /
-        <Link href="tel:+917904656924" className="text-blue-700">
-          +91 79046 56924
-        </Link>
-      </span>
+      <p className="flex gap-1 text-blue-700">
+        <a href="tel:+919443956135">+91 94439 56135</a> /
+        <a href="tel:+917904656924">+91 79046 56924</a>
+      </p>
     ),
-    href: "#", // Primary number for the clickable tel: link
+    href: "tel:+919443956135", // Set primary number as main link
   },
 ];
 
@@ -70,6 +67,7 @@ const FormSchema = z.object({
   }),
 });
 export default function Contact() {
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -80,32 +78,31 @@ export default function Contact() {
     },
   });
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
-    // try {
-    //   await sendContactForm(data);
-    //   form.reset();
-    //   toast({
-    //     variant: "default",
-    //     title: "Message Received",
-    //     description:
-    //       "Thank you for reaching out! We will get back to you shortly",
-    //   });
-    // } catch (error) {
-    //   toast({
-    //     variant: "destructive",
-    //     title: "Message Not Sent",
-    //     description: "We couldn't send your message. Please try again later.",
-    //   });
-    // }
+    try {
+      await sendContactForm(data);
+      form.reset();
+      toast({
+        variant: "default",
+        title: "Message Received",
+        description:
+          "Thank you for reaching out! We will get back to you shortly",
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Message Not Sent",
+        description: "We couldn't send your message. Please try again later.",
+      });
+    }
   }
   return (
     <section>
-      <div className=" mx-auto bg-slate-50  w-full    pb-20 pt-8 gap-10">
-        <MaxWidthWrapper className=" grid md:grid-cols-2  p-10   relative gap-10  ">
+      <div className=" mx-auto bg-slate-50  w-full    pb-20 pt-6 gap-10">
+        <MaxWidthWrapper className=" grid lg:grid-cols-2     relative gap-10  ">
           <div className=" h-full w-full  ">
             <img
-              className="h-full w-full rounded-xl  object object-cover"
-              src="/pictures/contact-img.jpg"
+              className="h-[50vh] md:h-[80vh] w-full rounded-xl object-center object-cover"
+              src="/pictures/contact-img-2.jpg"
               alt=""
             />
           </div>
@@ -115,10 +112,11 @@ export default function Contact() {
             </h1>
             <p className="text-sm mb-10">
               Or just reach out manually to
-              <span className="text-blue-700">
-                {" "}
-                info@goconstruction.com{" "}
-              </span>{" "}
+              <span className="text-blue-700 px-1">
+                <Link href="mailto:info@goconstruction.in">
+                  info@goconstruction.in
+                </Link>
+              </span>
             </p>
             <Form {...form}>
               <form
@@ -216,7 +214,11 @@ export default function Contact() {
         </h1>
         <p className="text-sm">
           Or just reach out manually to
-          <span className="text-blue-700"> info@goconstruction.com </span>{" "}
+          <span className="text-blue-700 px-1">
+            <Link href="mailto:info@goconstruction.in">
+              info@goconstruction.in
+            </Link>
+          </span>
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 w-full p-4 mt-4 gap-10">
@@ -231,9 +233,14 @@ export default function Contact() {
                 <h1 className="font-bold text-lg">{item.title}</h1>
                 <p className="">{item.description}</p>
               </div>
-              <Link href={item.href} className="text-sm text-blue-700">
-                {item.info}
-              </Link>
+              {/* Conditionally render either a <Link> or a normal <p> */}
+              {typeof item.info === "string" ? (
+                <Link href={item.href} className="text-sm text-blue-700">
+                  {item.info}
+                </Link>
+              ) : (
+                item.info // This will render the <p> for phone numbers correctly
+              )}
             </div>
           ))}
         </div>

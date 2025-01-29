@@ -2,6 +2,7 @@
 // import { footerLinks } from "@/constants/common";
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import { footerLinks } from "@/constants/common";
 
 const socialIcons = [
   {
@@ -55,50 +56,6 @@ const socialIcons = [
     ),
   },
 ];
-export const footerLinks = [
-  {
-    title: "Quick Links",
-    links: [
-      { href: "#", label: "Home" },
-      { href: "#", label: "Services" },
-      { href: "#", label: "Projects" },
-      { href: "#", label: "Contact" },
-    ],
-  },
-
-  {
-    title: "Contact",
-    links: [
-      {
-        href: "#",
-        label: (
-          <span className="flex gap-1 flex-wrap">
-            <Link
-              href="tel:+919443956135"
-              className="text-gray-50 px-0.5 hover:text-red-500 transition-colors">
-              +91 94439 56135
-            </Link>
-            /
-            <Link
-              href="tel:+917904656924"
-              className="text-gray-50 px-1 hover:text-red-500 transition-colors">
-              +91 79046 56924
-            </Link>
-          </span>
-        ),
-      },
-      {
-        href: "mailto:info@goconstruction.in",
-        label: "info@goconstruction.in",
-      },
-      {
-        href: "#",
-        label:
-          "No,42 ganapathy nagar 2nd cross, moolakualam, Puducherry 605110",
-      },
-    ],
-  },
-];
 
 export default function Footer() {
   return (
@@ -126,11 +83,24 @@ export default function Footer() {
             <ul className="space-y-2">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-50 hover:text-red-500 transition-colors">
-                    {link.label}
-                  </Link>
+                  {link.isMultiple ? (
+                    <span className="flex gap-1 flex-wrap">
+                      {link.labels.map((subLink, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subLink.href}
+                          className="text-gray-50 px-0.5 hover:text-red-500 transition-colors">
+                          {subLink.text}
+                        </Link>
+                      ))}
+                    </span>
+                  ) : (
+                    <Link
+                      href={link.href || ""}
+                      className="text-gray-50 hover:text-red-500 transition-colors">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

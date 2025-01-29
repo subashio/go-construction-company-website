@@ -2,6 +2,7 @@
 
 import { navLinks } from "@/constants/common";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -27,6 +28,7 @@ export default function Navbar({
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = usePathname();
+  const [isHovered, setIsHovered] = useState(false);
 
   const isHomePage = location === "/";
   useEffect(() => {
@@ -67,17 +69,83 @@ export default function Navbar({
             "w-full bg-black/50 backdrop-blur-xl text-white text-sm font-medium p-2",
             "flex items-center justify-center overflow-hidden"
           )}>
-          <div className="whitespace-nowrap animate-marquee ">
-            <p className="bg-gradient-to-r  from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
-              ⭐ Daily Updates: Amazing houses for sale! Contact us today for
-              the best deals. Contact us
-              <span className="mx-2   text-white/80">
-                <Link href="/Contact" className="hover:underline">
-                  Click Here
-                </Link>
-              </span>
-              or visit our website! ⭐
-            </p>
+          <div className="overflow-hidden whitespace-nowrap">
+            <motion.div
+              className="flex gap-2 z-30 animate-marquee sm:animate-marquee-fast hover:animate-marquee-paused"
+              animate={{
+                x: isHovered ? "50" : "-100%", // Pause at the start (0) when hovered
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity, // Continuous loop
+                  duration: 15, // Duration of one loop
+                  ease: "linear", // Smooth scrolling
+                },
+              }}
+              onMouseEnter={() => setIsHovered(true)} // Pause on hover
+              onMouseLeave={() => setIsHovered(false)} // Resume animation when hover ends
+            >
+              <p className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
+                ⭐ Daily Updates: Amazing houses for sale! Contact us today for
+                the best deals. Contact us
+                <span className="mx-2 text-white/80">
+                  <Link href="/Contact" className="hover:underline">
+                    Click Here
+                  </Link>
+                </span>
+                or visit our website!
+              </p>
+              <p className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
+                ⭐ Daily Updates: Amazing houses for sale! Contact us today for
+                the best deals. Contact us
+                <span className="mx-2 text-white/80">
+                  <Link href="/Contact" className="hover:underline">
+                    Click Here
+                  </Link>
+                </span>
+                or visit our website!
+              </p>
+              <p className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
+                ⭐ Daily Updates: Amazing houses for sale! Contact us today for
+                the best deals. Contact us
+                <span className="mx-2 text-white/80">
+                  <Link href="/Contact" className="hover:underline">
+                    Click Here
+                  </Link>
+                </span>
+                or visit our website!
+              </p>
+              <p className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
+                ⭐ Daily Updates: Amazing houses for sale! Contact us today for
+                the best deals. Contact us
+                <span className="mx-2 text-white/80">
+                  <Link href="/Contact" className="hover:underline">
+                    Click Here
+                  </Link>
+                </span>
+                or visit our website!
+              </p>
+              <p className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
+                ⭐ Daily Updates: Amazing houses for sale! Contact us today for
+                the best deals. Contact us
+                <span className="mx-2 text-white/80">
+                  <Link href="/Contact" className="hover:underline">
+                    Click Here
+                  </Link>
+                </span>
+                or visit our website!
+              </p>
+              <p className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
+                ⭐ Daily Updates: Amazing houses for sale! Contact us today for
+                the best deals. Contact us
+                <span className="mx-2 text-white/80">
+                  <Link href="/Contact" className="hover:underline">
+                    Click Here
+                  </Link>
+                </span>
+                or visit our website!
+              </p>
+            </motion.div>
           </div>
         </div>
       )}

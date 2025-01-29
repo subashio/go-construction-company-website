@@ -29,18 +29,29 @@ body {
   animation-delay: 2s;
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
+/* @keyframes marqueeLoop {
+  from {
+    transform: translateX(0%);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
 }
+
 .animate-marquee {
-  display: inline-block;
-  animation: marquee 15s linear infinite;
+  display: flex;
+  animation: marqueeLoop 12s linear infinite;
 }
+
+@media (max-width: 640px) {
+  .animate-marquee-fast {
+    animation: marqueeLoop 6s linear infinite;
+  }
+}
+
+.animate-marquee-paused:hover {
+  animation-play-state: paused;
+} */
 
 @keyframes gradient {
   0% {

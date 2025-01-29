@@ -74,7 +74,8 @@ export default function HeroSection() {
               duration: 8, // Slow zoom effect over 8 seconds
               ease: "easeInOut",
               repeat: isPlaying ? Infinity : 0, // Loop indefinitely only if playing
-              repeatType: "reverse", // Smoothly reverse back to the original scale
+              repeatType: "reverse",
+              // Smoothly reverse back to the original scale
             }}
           />
           <MotionMaxWidthWrapper

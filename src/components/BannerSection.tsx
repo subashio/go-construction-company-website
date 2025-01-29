@@ -12,6 +12,7 @@ import React from "react";
 import { adBannerList } from "@/constants/common";
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import { motion } from "framer-motion";
 
 export default function BannerSection() {
   const plugin = React.useRef(
@@ -60,21 +61,18 @@ export default function BannerSection() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-4 z-30 mx-auto flex w-full justify-center gap-2 md:bg-secondary/0">
-          {Array.from({ length: count }).map((_, index) => (
-            <svg
-              key={index}
-              xmlns="http://www.w3.org/2000/svg"
-              className={cn(
-                "h-3 w-3 cursor-pointer transition-colors",
-                current === index
-                  ? "scale-x-[1.8] rounded-sm fill-primary/50"
-                  : "rounded-full border fill-secondary/70"
-              )}
-              viewBox="0 0 24 24"
-              onClick={() => handleDotClick(index)}>
-              <circle cx="12" cy="12" r="10" />
-            </svg>
+
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+          {adBannerList.map((_, idx) => (
+            <motion.button
+              key={idx}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => handleDotClick(idx)}
+              className={`h-2.5  w-2.5 rounded-full transition-all duration-300 ${
+                current === idx ? "bg-white w-5" : "bg-white/50 w-2.5"
+              }`}
+            />
           ))}
         </div>
       </Carousel>

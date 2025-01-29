@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({
   weight: ["300", "400", "500", "700", "900"],
@@ -30,6 +31,7 @@ export default function RootLayout({
         )}>
         <main className="relative flex min-h-screen flex-col bg-cover bg-no-repeat">
           {children}
+          <Toaster />
           <Footer />
         </main>
       </body>

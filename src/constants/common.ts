@@ -98,7 +98,38 @@ export const ServicesCarouselItem = [
     image: "/pictures/apart.png",
   },
 ];
-
+export const footerLinks = [
+  {
+    title: "Quick Links",
+    links: [
+      { href: "#", label: "Home" },
+      { href: "#", label: "Services" },
+      { href: "#", label: "Projects" },
+      { href: "#", label: "Contact" },
+    ],
+  },
+  {
+    title: "Contact",
+    links: [
+      {
+        isMultiple: true, // Add a flag to indicate multiple links
+        labels: [
+          { href: "tel:+919443956135", text: "+91 94439 56135 /" },
+          { href: "tel:+917904656924", text: "+91 79046 56924" },
+        ],
+      },
+      {
+        href: "mailto:info@goconstruction.in",
+        label: "info@goconstruction.in",
+      },
+      {
+        href: "#",
+        label:
+          "No,42 Ganapathy Nagar 2nd Cross, Moolakualam, Puducherry 605110",
+      },
+    ],
+  },
+];
 export const adBannerList = [
   {
     to: "/",
@@ -125,7 +156,7 @@ export const heroSliders = [
     title: "Redefining Spaces with Style",
     description:
       "Our expert interior design services bring sophistication and functionality to your home. We create personalized spaces that reflect your style, ensuring comfort and aesthetics.",
-    image: "/pictures/slide-2.jpg",
+    image: "/pictures/slide-2.0.jpg",
   },
   {
     id: 3,
@@ -133,7 +164,7 @@ export const heroSliders = [
     title: "Smart Homes for a Smarter Future",
     description:
       "Experience the perfect harmony of style and functionality in our modern houses. Thoughtfully designed with premium materials and smart features, we create homes that redefine comfort and sophistication.",
-    image: "/pictures/slide-3.jpg",
+    image: "/pictures/slide-5.jpg",
   },
 ];
 
@@ -182,18 +213,6 @@ export const ProjectPageCardItems = [
       "/pictures/home-1/img-2.jpg",
       "/pictures/home-1/img-3.jpg",
       "/pictures/home-1/img-4.jpg",
-      "/pictures/home-1/img-5.jpg",
-      "/pictures/home-1/img-6.jpg",
-      "/pictures/home-1/img-7.jpg",
-      "/pictures/home-1/img-8.jpg",
-      "/pictures/home-1/img-9.jpg",
-      "/pictures/home-1/img-10.jpg",
-      "/pictures/home-1/img-11.jpg",
-      "/pictures/home-1/img-12.jpg",
-      "/pictures/home-1/img-13.jpg",
-      "/pictures/home-1/img-14.jpg",
-      "/pictures/home-1/img-15.jpg",
-      "/pictures/home-1/img-16.jpg",
       "/pictures/home-1/img-17.jpg",
     ],
   },
@@ -205,7 +224,7 @@ export const ProjectPageCardItems = [
     image: "/pictures/home-2/img-1.jpg",
     images: [
       "/pictures/home-2/img-1.jpg",
-      "/pictures/home-2/img-1.jpg",
+      "/pictures/home-2/img-2.jpg",
       "/pictures/home-2/img-1.jpg",
     ],
   },
@@ -230,7 +249,7 @@ export const ProjectPageCardItems = [
     image: "/pictures/home-4/img-1.jpg",
     images: [
       "/pictures/home-4/img-1.jpg",
-      "/pictures/home-4/img-1.jpg",
+      "/pictures/home-4/img-2.jpg",
       "/pictures/home-4/img-1.jpg",
     ],
   },
@@ -243,8 +262,20 @@ export const ProjectPageCardItems = [
 
     images: [
       "/pictures/home-5/img-1.jpg",
-      "/pictures/home-5/img-1.jpg",
-      "/pictures/home-5/img-1.jpg",
+      "/pictures/home-5/img-3.jpg",
+      "/pictures/home-5/img-4.jpg",
+      "/pictures/home-5/img-5.jpg",
+      "/pictures/home-5/img-6.jpg",
+      "/pictures/home-5/img-7.jpg",
+      "/pictures/home-5/img-8.jpg",
+      "/pictures/home-5/img-9.jpg",
+      "/pictures/home-5/img-10.jpg",
+      "/pictures/home-5/img-11.jpg",
+      "/pictures/home-5/img-12.jpg",
+      "/pictures/home-5/img-13.jpg",
+      "/pictures/home-5/img-14.jpg",
+      "/pictures/home-5/img-15.jpg",
+      "/pictures/home-5/img-16.jpg",
     ],
   },
   {
