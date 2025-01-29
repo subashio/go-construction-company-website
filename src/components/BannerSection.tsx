@@ -19,13 +19,11 @@ export default function BannerSection() {
   );
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState<number>(0);
 
   React.useEffect(() => {
     if (!api) return;
 
-    // // Set total slide count and listen for slide changes
-    setCount(api.scrollSnapList().length);
+    // Set total slide count and listen for slide changes
     setCurrent(api.selectedScrollSnap());
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap());

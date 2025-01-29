@@ -88,6 +88,7 @@ export default function Contact() {
           "Thank you for reaching out! We will get back to you shortly",
       });
     } catch (error) {
+      console.log(error);
       toast({
         variant: "destructive",
         title: "Message Not Sent",
