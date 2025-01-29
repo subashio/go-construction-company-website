@@ -100,7 +100,7 @@ export const ProjectDialog: React.FC<ProjectDialogProps> = ({
           <DialogTitle className="p-6">{project.title}</DialogTitle>
         </DialogHeader>
         <div
-          className="relative h-[70vh] bg-black/20 w-full overflow-hidden rounded-lg"
+          className="relative h-[50vh] md:h-[70vh] bg-black/20 w-full overflow-hidden rounded-lg"
           onMouseEnter={() => setIsPaused(true)} // Pause autoplay on hover
           onMouseLeave={() => setIsPaused(false)} // Resume autoplay when mouse leaves
           onTouchStart={() => setIsPaused(true)} // Pause autoplay on touch start
