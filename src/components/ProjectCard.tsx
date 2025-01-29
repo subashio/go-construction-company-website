@@ -14,7 +14,8 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <motion.div
+    <motion.a
+      href="/Project"
       className="group relative flex-shrink-0 w-[24rem] h-[30rem] lg:w-[32rem] lg:h-[36rem] overflow-hidden rounded-xl
       bg-white shadow-lg hover:shadow-xl transition-all duration-300"
       whileHover={{ y: -10 }}>
@@ -40,6 +41,6 @@ export default function ProjectCard({
           {description}
         </p>
       </div>
-    </motion.div>
+    </motion.a>
   );
 }

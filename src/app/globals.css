@@ -39,7 +39,7 @@ body {
 }
 .animate-marquee {
   display: inline-block;
-  animation: marquee 30s linear infinite;
+  animation: marquee 15s linear infinite;
 }
 
 @keyframes gradient {

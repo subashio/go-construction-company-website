@@ -1,12 +1,100 @@
 "use client";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { ProjectPageCardItems } from "@/constants/common";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import React from "react";
+
+interface Project {
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  images?: string[];
+}
+
+interface ProjectDialogProps {
+  project: Project;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}
+const ProjectDialog = ({ project, open, onOpenChange }: ProjectDialogProps) => {
+  const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+  const images = project.images || [project.image];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const previousImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-w-4xl p-0   ">
+        <DialogHeader>
+          <DialogTitle className="p-6">{project.title}</DialogTitle>
+        </DialogHeader>
+        <div className="relative  w-full  rounded-lg  bg-black/20 ">
+          <div className="relative h-[50vh] max-w-4xl ">
+            <img
+              src={images[currentImageIndex]}
+              alt={`${project.title} - Image ${currentImageIndex + 1}`}
+              className="h-full w-full object-contain"
+            />
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={previousImage}
+                  className="absolute left-2 top-1/2 z-50 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {images.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentImageIndex(idx)}
+                      className={`h-2 w-2 rounded-full ${
+                        idx === currentImageIndex ? "bg-white" : "bg-white/50"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+        <div className="mt-4 p-6">
+          <h3 className="text-lg font-semibold text-gray-900">
+            {project.category}
+          </h3>
+          <p className="mt-2 text-gray-600">{project.description}</p>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
 
 export default function Project() {
+  const [selectedProject, setSelectedProject] = React.useState<Project | null>(
+    null
+  );
+  const [dialogOpen, setDialogOpen] = React.useState(false);
   return (
     <div className="relative flex flex-col ">
       {/* Hero Section */}
@@ -24,13 +112,17 @@ export default function Project() {
       </section>
       {/* project cards */}
       <div className=" bg-gradient-to-br from-yellow-900/40 to-yellow-800/30 p-4 py-10 mt-14 backdrop-blur-xl">
-        <MaxWidthWrapper className="grid    grid-cols-1 rounded-t-xl bg-cover bg-fixed sm:grid-cols-2 xl:grid-cols-3 gap-10 ">
+        <MaxWidthWrapper className="grid  grid-cols-1 rounded-t-xl bg-cover bg-fixed sm:grid-cols-2 xl:grid-cols-3 gap-10 ">
           {ProjectPageCardItems.map((project, index) => (
             <motion.div
               key={index}
               className="group relative flex-shrink-0 h-auto overflow-hidden   rounded-xl
                 bg-white shadow-lg hover:shadow-xl transition-all duration-300"
-              whileHover={{ y: -10 }}>
+              whileHover={{ y: -10 }}
+              onClick={() => {
+                setSelectedProject(project);
+                setDialogOpen(true);
+              }}>
               <div className="h-full overflow-hidden">
                 <img
                   src={project.image}
@@ -57,6 +149,13 @@ export default function Project() {
           ))}
         </MaxWidthWrapper>
       </div>
+      {selectedProject && (
+        <ProjectDialog
+          project={selectedProject}
+          open={dialogOpen}
+          onOpenChange={setDialogOpen}
+        />
+      )}
       <section
         className=" bg-cover  bg-fixed bg-no-repeat z-30 bg-bottom"
         style={{ backgroundImage: `url(/pictures/pro.jpg)` }}>

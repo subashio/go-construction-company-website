@@ -10,14 +10,13 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Building2, Loader, Mail, Phone } from "lucide-react";
-import React from "react";
 import { PhoneInput } from "@/components/ui/phone-input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { Textarea } from "@/components/ui/textarea";
-import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Building2, Loader, Mail, Phone } from "lucide-react";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 const ContactCardList = [
   {

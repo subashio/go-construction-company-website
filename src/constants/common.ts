@@ -113,7 +113,7 @@ export const adBannerList = [
 export const heroSliders = [
   {
     id: 1,
-    name: "Home",
+    name: "Individual Home",
     title: "Get Your Dream Home Done",
     description:
       "Specializing in individual house construction, we provide full support, ensuring seamless design, planning, and execution for your dream home. 20+ Years Of Experience in This industry.",
@@ -121,120 +121,180 @@ export const heroSliders = [
   },
   {
     id: 2,
-    name: "Home 2",
-    title: "Get Your Dream Home Done",
+    name: "Interior Design",
+    title: "Redefining Spaces with Style",
     description:
-      "Specializing in individual house construction, we provide full support, ensuring seamless design, planning, and execution for your dream home. 20+ Years Of Experience in This industry.",
-    image: "/pictures/hero-bg-2.png",
+      "Our expert interior design services bring sophistication and functionality to your home. We create personalized spaces that reflect your style, ensuring comfort and aesthetics.",
+    image: "/pictures/slide-2.jpg",
   },
   {
     id: 3,
-    name: "Home 3",
-    title: "Get Your Dream Home Done",
+    name: "Modern House",
+    title: "Smart Homes for a Smarter Future",
     description:
-      "Specializing in individual house construction, we provide full support, ensuring seamless design, planning, and execution for your dream home. 20+ Years Of Experience in This industry.",
-    image: "/pictures/hero-bg.png",
+      "Experience the perfect harmony of style and functionality in our modern houses. Thoughtfully designed with premium materials and smart features, we create homes that redefine comfort and sophistication.",
+    image: "/pictures/slide-3.jpg",
   },
 ];
 
 export const ProjectCardItems = [
   {
     id: 1,
-    title: "Luxurious Villas",
+    title: "Luxurious Villas  (1200 Sq. Ft.)",
     category: "Premium Residential",
     description: "Exclusive properties that redefine luxury living standards",
-    image: "/pictures/p-5.jpeg",
+    image: "/pictures/home-1/img-1.jpeg",
   },
   {
     id: 2,
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-4.jpg",
+    image: "/pictures/home-2/img-1.jpg",
   },
   {
     id: 3,
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-2.jpg",
+    image: "/pictures/home-3/img-1.jpg",
   },
   {
     id: 4,
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-6.jpg",
+    image: "/pictures/home-4/img-1.jpg",
   },
 ];
 
 export const ProjectPageCardItems = [
   {
-    title: "Luxurious Villas",
+    title: "Luxurious Villas  (1200 Sq. Ft.)",
     category: "Premium Residential",
     description: "Exclusive properties that redefine luxury living standards",
-    image: "/pictures/p-5.jpeg",
+    image: "/pictures/home-1/img-1.jpeg",
+    images: [
+      "/pictures/home-1/img-1.jpeg",
+      "/pictures/home-1/img-2.jpg",
+      "/pictures/home-1/img-3.jpg",
+      "/pictures/home-1/img-4.jpg",
+      "/pictures/home-1/img-5.jpg",
+      "/pictures/home-1/img-6.jpg",
+      "/pictures/home-1/img-7.jpg",
+      "/pictures/home-1/img-8.jpg",
+      "/pictures/home-1/img-9.jpg",
+      "/pictures/home-1/img-10.jpg",
+      "/pictures/home-1/img-11.jpg",
+      "/pictures/home-1/img-12.jpg",
+      "/pictures/home-1/img-13.jpg",
+      "/pictures/home-1/img-14.jpg",
+      "/pictures/home-1/img-15.jpg",
+      "/pictures/home-1/img-16.jpg",
+      "/pictures/home-1/img-17.jpg",
+    ],
   },
   {
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-4.jpg",
+    image: "/pictures/home-2/img-1.jpg",
+    images: [
+      "/pictures/home-2/img-1.jpg",
+      "/pictures/home-2/img-1.jpg",
+      "/pictures/home-2/img-1.jpg",
+    ],
   },
 
   {
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-5.jpg",
+    image: "/pictures/home-3/img-1.jpg",
+    images: [
+      "/pictures/home-3/img-1.jpg",
+      "/pictures/home-3/img-1.jpg",
+      "/pictures/home-3/img-1.jpg",
+    ],
   },
   {
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-2.jpg",
+    image: "/pictures/home-4/img-1.jpg",
+    images: [
+      "/pictures/home-4/img-1.jpg",
+      "/pictures/home-4/img-1.jpg",
+      "/pictures/home-4/img-1.jpg",
+    ],
   },
   {
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-3.jpg",
+    image: "/pictures/home-5/img-1.jpg",
+
+    images: [
+      "/pictures/home-5/img-1.jpg",
+      "/pictures/home-5/img-1.jpg",
+      "/pictures/home-5/img-1.jpg",
+    ],
   },
   {
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-6.jpg",
+    image: "/pictures/home-6/img-1.jpg",
+    images: [
+      "/pictures/home-6/img-1.jpg",
+      "/pictures/home-6/img-1.jpg",
+      "/pictures/home-6/img-1.jpg",
+    ],
   },
 
   {
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-8.jpg",
+    image: "/pictures/home-7/img-1.jpg",
+    images: [
+      "/pictures/home-7/img-1.jpg",
+      "/pictures/home-7/img-1.jpg",
+      "/pictures/home-7/img-1.jpg",
+    ],
   },
   {
-    title: "Individual House",
+    title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
     description:
       "Modern living spaces crafted with precision and sustainability in mind",
-    image: "/pictures/p-9.JPG",
+    image: "/pictures/home-8/img-1.JPG",
+    images: [
+      "/pictures/home-8/img-1.jpg",
+      "/pictures/home-8/img-1.jpg",
+      "/pictures/home-8/img-1.jpg",
+    ],
   },
   {
-    title: "Appartment",
+    title: "Spacious 3-Floor Apartment (1200 Sq. Ft.)",
     category: "Commercial",
     description:
       "Innovative structural solutions for complex architectural challenges",
-    image: "/pictures/p-7.jpg",
+    image: "/pictures/home-9/img-1.jpg",
+    images: [
+      "/pictures/home-9/img-1.jpg",
+      "/pictures/home-9/img-1.jpg",
+      "/pictures/home-9/img-1.jpg",
+    ],
   },
 ];
 
