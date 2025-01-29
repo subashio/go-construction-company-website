@@ -5,14 +5,13 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 
 import { adBannerList } from "@/constants/common";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import { motion } from "framer-motion";
 
 export default function BannerSection() {
   const plugin = React.useRef(
