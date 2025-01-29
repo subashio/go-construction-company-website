@@ -54,9 +54,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       });
 
       return res.status(200).json({ success: true });
-    } catch (err: any) {
-      console.log(err);
-      return res.status(400).json({ message: err.message });
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log(err);
+        return res.status(400).json({ message: err.message });
+      } else {
+        console.log("An unknown error occurred", err);
+        return res.status(400).json({ message: "An unknown error occurred" });
+      }
     }
   }
   return res.status(400).json({ message: "Bad request" });
