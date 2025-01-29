@@ -279,9 +279,9 @@ export const ProjectPageCardItems = [
       "Modern living spaces crafted with precision and sustainability in mind",
     image: "/pictures/home-8/img-1.JPG",
     images: [
-      "/pictures/home-8/img-1.jpg",
-      "/pictures/home-8/img-1.jpg",
-      "/pictures/home-8/img-1.jpg",
+      "/pictures/home-8/img-1.JPG",
+      "/pictures/home-8/img-1.JPG",
+      "/pictures/home-8/img-1.JPG",
     ],
   },
   {
