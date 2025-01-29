@@ -9,10 +9,10 @@ import {
 } from "@/components/ui/dialog";
 import { ProjectPageCardItems } from "@/constants/common";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface Project {
   title: string;
@@ -27,50 +27,129 @@ interface ProjectDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
-const ProjectDialog = ({ project, open, onOpenChange }: ProjectDialogProps) => {
-  const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+
+const variants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 1000 : -1000,
+    opacity: 0,
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? 1000 : -1000,
+    opacity: 0,
+  }),
+};
+
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
+};
+
+const ProjectDialog: React.FC<ProjectDialogProps> = ({
+  project,
+  open,
+  onOpenChange,
+}) => {
+  const [[page, direction], setPage] = useState([0, 0]);
   const images = project.images || [project.image];
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  useEffect(() => {
+    if (!open) return;
+
+    const interval = setInterval(() => {
+      paginate(1);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [open]);
+
+  const paginate = (newDirection: number) => {
+    const newPage = page + newDirection;
+    if (newPage >= 0 && newPage < images.length) {
+      setPage([newPage, newDirection]);
+    } else if (newPage < 0) {
+      setPage([images.length - 1, newDirection]);
+    } else {
+      setPage([0, newDirection]);
+    }
   };
 
-  const previousImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  const imageIndex = ((page % images.length) + images.length) % images.length;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl p-0   ">
+      <DialogContent className="max-w-3xl p-0">
         <DialogHeader>
           <DialogTitle className="p-6">{project.title}</DialogTitle>
         </DialogHeader>
-        <div className="relative  w-full  rounded-lg  bg-black/20 ">
-          <div className="relative h-[50vh] max-w-4xl ">
-            <img
-              src={images[currentImageIndex]}
-              alt={`${project.title} - Image ${currentImageIndex + 1}`}
-              className="h-full w-full object-contain"
-            />
+        <div className="relative h-[70vh] bg-black/20 w-full overflow-hidden rounded-lg">
+          <div className="relative h-full w-full">
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.div
+                key={page}
+                className="absolute w-full h-full"
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.2 },
+                }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipe = swipePower(offset.x, velocity.x);
+
+                  if (swipe < -swipeConfidenceThreshold) {
+                    paginate(1);
+                  } else if (swipe > swipeConfidenceThreshold) {
+                    paginate(-1);
+                  }
+                }}>
+                <img
+                  src={images[imageIndex]}
+                  alt={`${project.title} - Image ${imageIndex + 1}`}
+                  className="h-full w-full object-contain pointer-events-none"
+                />
+              </motion.div>
+            </AnimatePresence>
+
             {images.length > 1 && (
               <>
-                <button
-                  onClick={previousImage}
-                  className="absolute left-2 top-1/2 z-50 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => paginate(-1)}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors z-10">
                   <ChevronLeft className="h-6 w-6" />
-                </button>
-                <button
-                  onClick={nextImage}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => paginate(1)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors z-10">
                   <ChevronRight className="h-6 w-6" />
-                </button>
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                </motion.button>
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                   {images.map((_, idx) => (
-                    <button
+                    <motion.button
                       key={idx}
-                      onClick={() => setCurrentImageIndex(idx)}
-                      className={`h-2 w-2 rounded-full ${
-                        idx === currentImageIndex ? "bg-white" : "bg-white/50"
+                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: 0.9 }}
+                      onClick={() => {
+                        const newDirection = idx > imageIndex ? 1 : -1;
+                        setPage([idx, newDirection]);
+                      }}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        idx === imageIndex ? "bg-white w-4" : "bg-white/50 w-2"
                       }`}
                     />
                   ))}
@@ -89,7 +168,6 @@ const ProjectDialog = ({ project, open, onOpenChange }: ProjectDialogProps) => {
     </Dialog>
   );
 };
-
 export default function Project() {
   const [selectedProject, setSelectedProject] = React.useState<Project | null>(
     null
