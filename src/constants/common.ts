@@ -133,7 +133,7 @@ export const footerLinks = [
 export const adBannerList = [
   {
     to: "/Contact",
-    image: "/pictures/banner-1.png",
+    image: "/pictures/Banner-1.png",
   },
 ];
 
