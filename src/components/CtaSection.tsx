@@ -4,7 +4,7 @@ import { buttonVariants } from "./ui/button";
 
 export default function CtaSection() {
   return (
-    <section className=" relative h-[50vh] bg-[url('/pictures/ctaBg.jpg')] bg-no-repeat bg-fixed bg-cover mt-20 ">
+    <section className=" relative h-[50vh] bg-[url('/pictures/ctaBg.jpg')] bg-no-repeat bg-fixed bg-cover mt-10 ">
       <div className=" bg-gradient-to-r from-yellow-600/50  to-yellow-400/500 h-full w-full flex flex-col gap-6 items-center  justify-center  ">
         <h1 className="text-4xl font-bold max-w-xl z-10 text-center ">
           Get in Touch to Build Your Dream Home
