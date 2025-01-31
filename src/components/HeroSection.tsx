@@ -13,6 +13,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import BoxReveal from "./ui/box-reveal";
+import Image from "next/image";
 
 const MotionMaxWidthWrapper = motion.create(MaxWidthWrapper);
 
@@ -57,7 +58,7 @@ export default function HeroSection() {
       <div className="absolute inset-0  bg-black/50 opacity-70 z-20" />
       <div className="overflow-hidden  relative h-full">
         <AnimatePresence>
-          <motion.img
+          {/* <motion.img
             key={heroSliders[currentSlide].id}
             src={heroSliders[currentSlide].image}
             alt={heroSliders[currentSlide].name}
@@ -77,7 +78,26 @@ export default function HeroSection() {
               repeatType: "reverse",
               // Smoothly reverse back to the original scale
             }}
-          />
+          /> */}
+          <motion.div
+            key={heroSliders[currentSlide].id}
+            initial={{ scale: 1 }}
+            animate={isPlaying ? { scale: 1.1 } : { scale: 1 }}
+            transition={{
+              duration: 8,
+              ease: "easeInOut",
+              repeat: isPlaying ? Infinity : 0,
+              repeatType: "reverse",
+            }}
+            className="absolute top-0 left-0 w-full h-full">
+            <Image
+              src={heroSliders[currentSlide].image}
+              alt={heroSliders[currentSlide].name}
+              fill
+              priority
+              className="object-cover"
+            />
+          </motion.div>
           <MotionMaxWidthWrapper
             initial={{
               x: 900,

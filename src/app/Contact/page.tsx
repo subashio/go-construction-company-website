@@ -19,6 +19,7 @@ import { Building2, Loader, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import Image from "next/image";
 
 const ContactCardList = [
   {
@@ -101,10 +102,12 @@ export default function Contact() {
       <div className=" mx-auto bg-slate-50  w-full    pb-20 pt-6 gap-10">
         <MaxWidthWrapper className=" grid lg:grid-cols-2     relative gap-10  ">
           <div className=" h-full w-full  ">
-            <img
+            <Image
+              height={4739}
+              width={3349}
               className="h-[50vh] md:h-[80vh] w-full rounded-xl object-center object-cover"
               src="/pictures/contact-img-2.jpg"
-              alt=""
+              alt="Contact Go-Construction"
             />
           </div>
           <div className="z-30  ">

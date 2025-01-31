@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/dialog";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 interface Project {
@@ -132,9 +133,13 @@ export const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     paginate(-1);
                   }
                 }}>
-                <img
+                <Image
+                  width={1200}
+                  height={1600}
                   src={images[imageIndex]}
-                  alt={`${project.title} - Image ${imageIndex + 1}`}
+                  alt={`Go-construction ${project.title} - Image ${
+                    imageIndex + 1
+                  }`}
                   className="h-full w-full object-contain pointer-events-none"
                 />
               </motion.div>

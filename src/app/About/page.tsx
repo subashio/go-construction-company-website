@@ -88,7 +88,7 @@ export default function About() {
               height={500}
               src="/pictures/about.jpg"
               className="w-full rounded-lg"
-              alt="go construction about image"
+              alt="Go-Construction About us"
             />
           </div>
         </motion.div>
@@ -156,13 +156,13 @@ export default function About() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="  rounded-lg">
+          className=" relative rounded-lg">
           <Image
             width={500}
             height={500}
             src="/pictures/vandm.jpg"
             className="w-full rounded-lg"
-            alt="go construction about image"
+            alt="Go-Construction Vision and mission"
           />
         </motion.div>
       </MaxWidthWrapper>

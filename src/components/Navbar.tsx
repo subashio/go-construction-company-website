@@ -16,6 +16,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
+import Image from "next/image";
 
 export default function Navbar({
   textColor,
@@ -153,18 +154,22 @@ export default function Navbar({
       <MaxWidthWrapper className="flex items-center h-20 justify-between">
         {isScrolled ? (
           <Link href="/">
-            <img
+            <Image
+              width={197}
+              height={59}
               src="/logos/dark-logo.png"
               className="h-14 transition-transform duration-300 hover:scale-105"
-              alt="go construction logo image"
+              alt="Go-construction logo image"
             />
           </Link>
         ) : (
           <Link href="/">
-            <img
-              src={image}
+            <Image
+              width={197}
+              height={59}
+              src={image || "/logos/logo.png"}
               className="h-14 transition-transform duration-300 hover:scale-105"
-              alt="go construction logo image"
+              alt="Go-construction logo image"
             />
           </Link>
         )}
@@ -209,10 +214,12 @@ export default function Navbar({
             <Menu className="w-6 h-6" />
           </SheetTrigger>
           <SheetContent className="w-full p-0">
-            <img
+            <Image
+              width={197}
+              height={59}
               src="/logos/dark-logo.png"
               className="mb-8 h-14 mt-4"
-              alt="go construction logo image"
+              alt="Go-construction logo image"
             />
             <SheetHeader className="flex flex-col font-semibold  px-2 gap-2 text-black">
               {navLinks.map((link, index) => (

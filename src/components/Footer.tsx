@@ -3,6 +3,7 @@
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { footerLinks } from "@/constants/common";
+import Image from "next/image";
 
 const socialIcons = [
   {
@@ -63,9 +64,11 @@ export default function Footer() {
       <MaxWidthWrapper className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
         {/* Company Logo and Description */}
         <div className="md:col-span-1">
-          <img
+          <Image
+            width={197}
+            height={59}
             src="/logos/logo.png"
-            alt="Go Construction Logo"
+            alt="Go-Construction Logo"
             className="h-16 mb-4 -ml-3"
           />
           <p className="text-white text-sm border-b pb-6 max-w-sm">

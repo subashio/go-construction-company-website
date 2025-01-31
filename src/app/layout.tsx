@@ -11,10 +11,37 @@ const fontSans = FontSans({
   variable: "--font-sans",
   fallback: ["Arial", "sans-serif"],
 });
+
 export const metadata: Metadata = {
-  title: "Go-Construction | Building Your Dream Homes ",
+  title: "Go-Construction | Build Your Dream Home with Experts",
   description:
-    "At Go-Construction, we bring your dream homes to life with professional construction services tailored to your needs.",
+    "Go-Construction specializes in building individual houses, villas, and dream homes. Explore houses for sale and professional construction services tailored to your needs.",
+  keywords: [
+    "Go-Construction",
+    "house for sale",
+    "individual house",
+    "villa construction",
+    "custom home builders",
+    "real estate",
+    "construction company",
+    "home builders",
+    "dream home",
+  ],
+  openGraph: {
+    title: "Go-Construction | Build Your Dream Home with Experts",
+    description:
+      "Go-Construction offers expert home construction services, including individual houses, villas, and real estate solutions. Find your dream home today.",
+    type: "website",
+    url: "https://goconstruction.in", // Replace with actual URL
+    images: [
+      {
+        url: "https://https://goconstruction.in/og-image.jpg", // Add an image URL
+        width: 1200,
+        height: 630,
+        alt: "Go-Construction - Build Your Dream Home",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

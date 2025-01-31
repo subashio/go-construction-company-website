@@ -26,7 +26,7 @@ export default function ServiceCard({
           width={400}
           height={100}
           className="w-full object-contain  object-center rounded-t-lg"
-          alt="Services card image for go construction"
+          alt="Services card image for Go-construction"
         />
       </CardHeader>
       <CardContent className="flex flex-col mt-4 text-center  gap-y-4 items-center">

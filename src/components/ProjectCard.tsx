@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface ProjectCardProps {
   title: string;
@@ -20,9 +21,11 @@ export default function ProjectCard({
       bg-white shadow-lg hover:shadow-xl transition-all duration-300"
       whileHover={{ y: -10 }}>
       <div className="h-full overflow-hidden">
-        <img
+        <Image
           src={image}
-          alt={`go contruction ${category} image`}
+          fill
+          priority
+          alt={`Go-construction ${category} image`}
           className="w-full h-full object-center  transition-transform duration-700
           group-hover:scale-110"
         />

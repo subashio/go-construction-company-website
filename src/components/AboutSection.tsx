@@ -2,6 +2,7 @@
 import { counts } from "@/constants/common";
 import { motion } from "framer-motion";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -79,9 +80,11 @@ export default function AboutSection() {
             className="relative">
             {/* <div className="absolute inset-0 bg-gradient-to-tr from-yellow-200/50 to-yellow-100 rounded-2xl transform rotate-3" /> */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl xl:m-10">
-              <img
+              <Image
+                width={612}
+                height={479}
                 src="/pictures/about-img.png"
-                alt="About Us"
+                alt="About Go-construction"
                 className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
               />
               {/* Overlay Gradient */}

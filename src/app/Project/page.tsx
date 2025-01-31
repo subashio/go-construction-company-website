@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { ProjectDialog } from "./components/ProjectDialog";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -50,9 +51,11 @@ export default function Project() {
                 setDialogOpen(true);
               }}>
               <div className="h-full overflow-hidden">
-                <img
+                <Image
+                  width={1200}
+                  height={1600}
                   src={project.image}
-                  alt={project.title}
+                  alt={`Go-construction ${project.title} - Image ${index + 1}`}
                   className="w-full h-full object-center  transition-transform duration-700
                     group-hover:scale-110"
                 />
