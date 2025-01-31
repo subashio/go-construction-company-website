@@ -133,7 +133,7 @@ export const footerLinks = [
 export const adBannerList = [
   {
     to: "/Contact",
-    image: "/pictures/Banner-1.png",
+    image: "/pictures/banner-1.png",
   },
 ];
 
@@ -224,6 +224,14 @@ export const ProjectPageCardItems = [
       "/pictures/home-2/img-1.jpg",
     ],
   },
+  {
+    title: "Individual House  (1200 Sq. Ft.)",
+    category: "Residential",
+    description:
+      "Modern living spaces crafted with precision and sustainability in mind",
+    image: "/pictures/home-10/img-1.jpeg",
+    images: ["/pictures/home-10/img-1.jpeg", "/pictures/home-10/img-2.jpeg"],
+  },
 
   {
     title: "Individual House  (1200 Sq. Ft.)",
@@ -237,6 +245,7 @@ export const ProjectPageCardItems = [
       "/pictures/home-3/img-1.jpg",
     ],
   },
+
   {
     title: "Individual House  (1200 Sq. Ft.)",
     category: "Residential",
@@ -295,8 +304,20 @@ export const ProjectPageCardItems = [
     image: "/pictures/home-7/img-1.jpg",
     images: [
       "/pictures/home-7/img-1.jpg",
-      "/pictures/home-7/img-1.jpg",
-      "/pictures/home-7/img-1.jpg",
+      "/pictures/home-7/img-3.jpg",
+      "/pictures/home-7/img-4.jpg",
+      "/pictures/home-7/img-5.jpg",
+      "/pictures/home-7/img-6.jpg",
+      "/pictures/home-7/img-7.jpg",
+      "/pictures/home-7/img-8.jpg",
+      "/pictures/home-7/img-9.jpg",
+      "/pictures/home-7/img-10.jpg",
+      "/pictures/home-7/img-11.jpg",
+      "/pictures/home-7/img-12.jpg",
+      "/pictures/home-7/img-13.jpg",
+      "/pictures/home-7/img-14.jpg",
+      "/pictures/home-7/img-15.jpg",
+      "/pictures/home-7/img-16.jpg",
     ],
   },
   {
@@ -306,9 +327,11 @@ export const ProjectPageCardItems = [
       "Modern living spaces crafted with precision and sustainability in mind",
     image: "/pictures/home-8/img-1.JPG",
     images: [
-      "/pictures/home-8/img-1.JPG",
-      "/pictures/home-8/img-1.JPG",
-      "/pictures/home-8/img-1.JPG",
+      "/pictures/home-8/img-1.jpg",
+      "/pictures/home-8/img-3.jpg",
+      "/pictures/home-8/img-4.jpg",
+      "/pictures/home-8/img-5.jpg",
+      "/pictures/home-8/img-6.jpg",
     ],
   },
   {
@@ -319,8 +342,8 @@ export const ProjectPageCardItems = [
     image: "/pictures/home-9/img-1.jpg",
     images: [
       "/pictures/home-9/img-1.jpg",
-      "/pictures/home-9/img-1.jpg",
-      "/pictures/home-9/img-1.jpg",
+      "/pictures/home-9/img-2.jpg",
+      "/pictures/home-9/img-3.jpg",
     ],
   },
 ];
