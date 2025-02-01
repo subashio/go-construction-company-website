@@ -61,21 +61,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://goconstruction.in",
   },
-  openGraph: {
-    title: "Go-Construction | Build Your Dream Home with Experts",
-    description:
-      "Go-Construction offers expert home construction services, including individual houses, villas, and real estate solutions. Find your dream home today.",
-    type: "website",
-    url: "https://goconstruction.in", // Replace with actual URL
-    images: [
-      {
-        url: "https://https://goconstruction.in/og-image.jpg", // Add an image URL
-        width: 1200,
-        height: 630,
-        alt: "Go-Construction - Build Your Dream Home",
-      },
-    ],
-  },
 };
 
 export default function RootLayout({
