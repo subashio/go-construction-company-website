@@ -36,7 +36,7 @@ export default function BannerSection() {
   };
 
   return (
-    <MaxWidthWrapper className="mt-10">
+    <MaxWidthWrapper className="mt-10" role="banner">
       <Carousel
         setApi={setApi}
         plugins={[plugin.current]}

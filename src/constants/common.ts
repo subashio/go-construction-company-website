@@ -21,91 +21,167 @@ export const counts = [
   { count: "40", description: "Projects Completed", prefix: "+" },
 ];
 
+// export const ServicesCarouselItem = [
+//   {
+//     title: "Independent Home",
+//     description:
+//       "Building standalone homes designed for privacy, comfort, and personalized living experiences.",
+//     image: "/pictures/inhome.png",
+//   },
+//   {
+//     title: "Civil Work ",
+//     description:
+//       " We Specializes in excavation, foundation work, concrete, masonry, drainage, waterproofing, and structural repairs ",
+//     image: "/pictures/civil.png",
+//   },
+//   {
+//     title: "Custom Construction ",
+//     description:
+//       " Providing tailored services for unique projects, ensuring your specific requirements are met with precision. ",
+//     image: "/pictures/stuct.png",
+//   },
+//   {
+//     title: "Interior Design",
+//     description:
+//       " Designing and delivering customized interiors that blend aesthetics with functionality",
+//     image: "/pictures/int.png",
+//   },
+
+//   {
+//     title: "Renovations & Remodeling ",
+//     description:
+//       " Transforming outdated or underutilized spaces into modern, functional, and visually appealing environments.",
+//     image: "/pictures/ren.png",
+//   },
+//   {
+//     title: "Maintenance & Repairs",
+//     description:
+//       " Ensuring your property stays in excellent condition with reliable and efficient maintenance services",
+//     image: "/pictures/mandr.png",
+//   },
+
+//   {
+//     title: "Project Management",
+//     description:
+//       " Overseeing every phase of your project to ensure seamless execution, on-time delivery, and adherence to budgets",
+//     image: "/pictures/pm.png",
+//   },
+//   {
+//     title: "Elevation & Plan",
+//     description:
+//       "Custom elevations and floor plans, ensuring both aesthetic appeal and functional efficiency in every project.",
+//     image: "/pictures/ele.png",
+//   },
+//   {
+//     title: "Landscaping",
+//     description:
+//       " Crafting beautiful and sustainable outdoor spaces, including gardens, patios, and outdoor structures",
+//     image: "/pictures/land.png",
+//   },
+
+//   {
+//     title: "Green Building & Sustainability",
+//     description:
+//       " Incorporating eco-friendly practices and sustainable materials to create energy-efficient, future-ready spaces.",
+//     image: "/pictures/gbuilding.png",
+//   },
+//   {
+//     title: "luxurious Villa",
+//     description:
+//       "builds luxury villas with custom designs, premium materials, and expert craftsmanship for elegant, spacious homes.",
+//     image: "/pictures/villa.png",
+//   },
+//   {
+//     title: "Apartment Construction",
+//     description:
+//       "Builds modern, high-quality apartments with efficient designs, ensuring durable and comfortable living spaces.",
+//     image: "/pictures/apart.png",
+//   },
+// ];
+
 export const ServicesCarouselItem = [
   {
-    title: "Independent Home",
+    title: "Independent Homes",
     description:
-      "Building standalone homes designed for privacy, comfort, and personalized living experiences.",
+      "We build high-quality, private, and modern homes with expert craftsmanship, ensuring comfort and lasting value.",
     image: "/pictures/inhome.png",
   },
   {
-    title: "Civil Work ",
+    title: "Civil Construction",
     description:
-      " We Specializes in excavation, foundation work, concrete, masonry, drainage, waterproofing, and structural repairs ",
+      "Specializing in excavation, foundation, concrete, and masonry work to create strong, durable, and reliable structures.",
     image: "/pictures/civil.png",
   },
   {
-    title: "Custom Construction ",
+    title: "Custom Builds",
     description:
-      " Providing tailored services for unique projects, ensuring your specific requirements are met with precision. ",
+      "Tailor-made construction solutions designed to meet your specific needs, using premium materials and skilled expertise.",
     image: "/pictures/stuct.png",
   },
   {
     title: "Interior Design",
     description:
-      " Designing and delivering customized interiors that blend aesthetics with functionality",
+      "Enhance your living spaces with customized interior designs that blend elegance, functionality, and modern aesthetics.",
     image: "/pictures/int.png",
   },
-
   {
-    title: "Renovations & Remodeling ",
+    title: "Renovations & Remodeling",
     description:
-      " Transforming outdated or underutilized spaces into modern, functional, and visually appealing environments.",
+      "Transform outdated spaces into modern, efficient, and visually stunning environments with our expert renovation services.",
     image: "/pictures/ren.png",
   },
   {
     title: "Maintenance & Repairs",
     description:
-      " Ensuring your property stays in excellent condition with reliable and efficient maintenance services",
+      "Keep your property in excellent condition with professional maintenance and repair services for long-term durability.",
     image: "/pictures/mandr.png",
   },
-
   {
     title: "Project Management",
     description:
-      " Overseeing every phase of your project to ensure seamless execution, on-time delivery, and adherence to budgets",
+      "We handle planning, coordination, and execution to ensure timely delivery and cost-effective construction projects.",
     image: "/pictures/pm.png",
   },
   {
-    title: "Elevation & Plan",
+    title: "Elevation & Plans",
     description:
-      "Custom elevations and floor plans, ensuring both aesthetic appeal and functional efficiency in every project.",
+      "Designing detailed elevation and floor plans that combine aesthetics, functionality, and structural efficiency seamlessly.",
     image: "/pictures/ele.png",
   },
   {
     title: "Landscaping",
     description:
-      " Crafting beautiful and sustainable outdoor spaces, including gardens, patios, and outdoor structures",
+      "Create stunning outdoor spaces with expert landscaping, including gardens, patios, and sustainable green designs.",
     image: "/pictures/land.png",
   },
-
   {
-    title: "Green Building & Sustainability",
+    title: "Green Building",
     description:
-      " Incorporating eco-friendly practices and sustainable materials to create energy-efficient, future-ready spaces.",
+      "Eco-friendly construction using sustainable materials and energy-efficient designs for modern, future-ready buildings.",
     image: "/pictures/gbuilding.png",
   },
   {
-    title: "luxurious Villa",
+    title: "Luxury Villas",
     description:
-      "builds luxury villas with custom designs, premium materials, and expert craftsmanship for elegant, spacious homes.",
+      "We build high-end villas with custom architecture, premium materials, and meticulous craftsmanship for elegant living.",
     image: "/pictures/villa.png",
   },
   {
-    title: "Apartment Construction",
+    title: "Apartments",
     description:
-      "Builds modern, high-quality apartments with efficient designs, ensuring durable and comfortable living spaces.",
+      "Constructing modern apartments with smart layouts, durable materials, and comfortable living spaces for urban lifestyles.",
     image: "/pictures/apart.png",
   },
 ];
+
 export const footerLinks = [
   {
     title: "Quick Links",
     links: [
-      { href: "#", label: "Home" },
-      { href: "#", label: "Services" },
-      { href: "#", label: "Projects" },
-      { href: "#", label: "Contact" },
+      { href: "/", label: "Home" },
+      { href: "/About", label: "About Us" },
+      { href: "/Project", label: "Projects" },
+      { href: "/Contact", label: "Contact" },
     ],
   },
   {
@@ -133,7 +209,7 @@ export const footerLinks = [
 export const adBannerList = [
   {
     to: "/Contact",
-    image: "/pictures/banner-1.png",
+    image: "/pictures/banner.png",
   },
 ];
 
@@ -198,11 +274,194 @@ export const ProjectCardItems = [
   },
 ];
 
+// export const ProjectPageCardItems = [
+//   {
+//     title: "Luxurious Villas - duplex house (1200 Sq. Ft.)",
+//     category: "Premium Residential",
+//     description:
+//       "Exclusive properties that redefine luxury living standards -  north facing house (20 x 60)",
+//     image: "/pictures/home-1/img-1.jpeg",
+//     images: [
+//       "/pictures/home-1/img-1.jpeg",
+//       "/pictures/home-1/img-2.jpg",
+//       "/pictures/home-1/img-3.jpg",
+//       "/pictures/home-1/img-4.jpg",
+//       "/pictures/home-1/img-17.jpg",
+//     ],
+//   },
+//   {
+//     title: "Individual House  (1200 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "- Modern living spaces crafted with precision and sustainability in mind - north facing house",
+//     image: "/pictures/home-2/img-1.jpg",
+//     images: [
+//       "/pictures/home-2/img-1.jpg",
+//       "/pictures/home-2/img-2.jpg",
+//       "/pictures/home-2/img-1.jpg",
+//     ],
+//   },
+//   {
+//     title: "Individual House  (900 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind -  sourth facing house (20 x 60)",
+//     image: "/pictures/home-10/img-1.jpeg",
+//     images: ["/pictures/home-10/img-1.jpeg", "/pictures/home-10/img-2.jpeg"],
+//   },
+
+//   {
+//     title: "Individual House - duplex house (900 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind -  East facing house (30 x 30)",
+//     image: "/pictures/home-3/img-1.jpg",
+//     images: [
+//       "/pictures/home-3/img-1.jpg",
+//       "/pictures/home-3/img-3.jpg",
+//       "/pictures/home-3/img-4.jpg",
+//       "/pictures/home-3/img-5.jpg",
+//       "/pictures/home-3/img-6.jpg",
+//       "/pictures/home-3/img-7.jpg",
+//       "/pictures/home-3/img-8.jpg",
+//       "/pictures/home-3/img-9.jpg",
+//       "/pictures/home-3/img-10.jpg",
+//       "/pictures/home-3/img-11.jpg",
+//     ],
+//   },
+
+//   {
+//     title: "Individual House  (1200 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind -  sourth facing house (20 x 60)",
+//     image: "/pictures/home-4/img-1.jpg",
+//     images: [
+//       "/pictures/home-4/img-1.jpg",
+//       "/pictures/home-4/img-2.jpg",
+//       "/pictures/home-4/img-1.jpg",
+//     ],
+//   },
+//   {
+//     title: "Individual House  (1440 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind -  East facing house (20 x 72)",
+//     image: "/pictures/home-5/img-1.jpg",
+
+//     images: [
+//       "/pictures/home-5/img-1.jpg",
+//       "/pictures/home-5/img-3.jpg",
+//       "/pictures/home-5/img-4.jpg",
+//       "/pictures/home-5/img-5.jpg",
+//       "/pictures/home-5/img-6.jpg",
+//       "/pictures/home-5/img-7.jpg",
+//       "/pictures/home-5/img-8.jpg",
+//       "/pictures/home-5/img-9.jpg",
+//       "/pictures/home-5/img-10.jpg",
+//       "/pictures/home-5/img-11.jpg",
+//       "/pictures/home-5/img-12.jpg",
+//       "/pictures/home-5/img-13.jpg",
+//       "/pictures/home-5/img-14.jpg",
+//       "/pictures/home-5/img-15.jpg",
+//       "/pictures/home-5/img-16.jpg",
+//     ],
+//   },
+//   {
+//     title: "Individual House  (1200 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind -  sourth facing house (20 x 60)",
+//     image: "/pictures/home-6/img-1.jpg",
+//     images: [
+//       "/pictures/home-6/img-1.jpg",
+//       "/pictures/home-6/img-1.jpg",
+//       "/pictures/home-6/img-1.jpg",
+//     ],
+//   },
+
+//   {
+//     title: "Individual House  (1200 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind -  north west facing house (20 x 60)",
+//     image: "/pictures/home-7/img-1.jpg",
+//     images: [
+//       "/pictures/home-7/img-1.jpg",
+//       "/pictures/home-7/img-3.jpg",
+//       "/pictures/home-7/img-4.jpg",
+//       "/pictures/home-7/img-5.jpg",
+//       "/pictures/home-7/img-6.jpg",
+//       "/pictures/home-7/img-7.jpg",
+//       "/pictures/home-7/img-8.jpg",
+//       "/pictures/home-7/img-9.jpg",
+//       "/pictures/home-7/img-10.jpg",
+//       "/pictures/home-7/img-11.jpg",
+//       "/pictures/home-7/img-12.jpg",
+//       "/pictures/home-7/img-13.jpg",
+//       "/pictures/home-7/img-14.jpg",
+//       "/pictures/home-7/img-15.jpg",
+//       "/pictures/home-7/img-16.jpg",
+//     ],
+//   },
+//   {
+//     title: "Individual House  (1200 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind - sourth facing house(20 x 60)",
+//     image: "/pictures/home-8/img-1.JPG",
+//     images: [
+//       "/pictures/home-8/img-1.jpg",
+//       "/pictures/home-8/img-3.jpg",
+//       "/pictures/home-8/img-4.jpg",
+//       "/pictures/home-8/img-5.jpg",
+//       "/pictures/home-8/img-6.jpg",
+//     ],
+//   },
+//   {
+//     title: "Spacious 3-Floor G+2 (2000 Sq. Ft.)",
+//     category: "Commercial",
+//     description:
+//       "Innovative structural solutions for complex architectural challenges - west facing G+2 ",
+//     image: "/pictures/home-9/img-1.jpg",
+//     images: [
+//       "/pictures/home-9/img-1.jpg",
+//       "/pictures/home-9/img-2.jpg",
+//       "/pictures/home-9/img-3.jpg",
+//     ],
+//   },
+//   {
+//     title: "Individual House - duplex house (900 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind - north east facing house (30  x 30)",
+//     image: "/pictures/home-11/img-1.jpg",
+//     images: ["/pictures/home-11/img-1.jpg", "/pictures/home-11/img-2.jpg"],
+//   },
+//   {
+//     title: "Individual House (1200 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind - west facing house (20  x 60)",
+//     image: "/pictures/home-12/img-1.jpg",
+//     images: ["/pictures/home-12/img-1.jpg", "/pictures/home-12/img-2.jpg"],
+//   },
+//   {
+//     title: "Individual House (1200 Sq. Ft.)",
+//     category: "Residential",
+//     description:
+//       "Modern living spaces crafted with precision and sustainability in mind - sourth west facing house (20  x 60)",
+//     image: "/pictures/home-13/img-1.jpg",
+//     images: ["/pictures/home-13/img-1.jpg", "/pictures/home-13/img-2.png"],
+//   },
+// ];
+
 export const ProjectPageCardItems = [
   {
-    title: "Luxurious Villas  (1200 Sq. Ft.)",
+    title: "Luxurious Villas - duplex house (1200 Sq. Ft.)",
     category: "Premium Residential",
-    description: "Exclusive properties that redefine luxury living standards",
+    description:
+      "Luxury homes crafted for comfort and elegance – north-facing house (20 x 60).",
     image: "/pictures/home-1/img-1.jpeg",
     images: [
       "/pictures/home-1/img-1.jpeg",
@@ -213,10 +472,10 @@ export const ProjectPageCardItems = [
     ],
   },
   {
-    title: "Individual House  (1200 Sq. Ft.)",
+    title: "Individual House (1200 Sq. Ft.)",
     category: "Residential",
     description:
-      "Modern living spaces crafted with precision and sustainability in mind",
+      "Modern and sustainable living space – north-facing house (20 x60).",
     image: "/pictures/home-2/img-1.jpg",
     images: [
       "/pictures/home-2/img-1.jpg",
@@ -225,32 +484,36 @@ export const ProjectPageCardItems = [
     ],
   },
   {
-    title: "Individual House  (1200 Sq. Ft.)",
+    title: "Individual House (900 Sq. Ft.)",
     category: "Residential",
     description:
-      "Modern living spaces crafted with precision and sustainability in mind",
+      "Precision-built home with sustainability – south-facing house (20 x 60).",
     image: "/pictures/home-10/img-1.jpeg",
     images: ["/pictures/home-10/img-1.jpeg", "/pictures/home-10/img-2.jpeg"],
   },
-
   {
-    title: "Individual House  (1200 Sq. Ft.)",
+    title: "Individual House - duplex house (900 Sq. Ft.)",
     category: "Residential",
-    description:
-      "Modern living spaces crafted with precision and sustainability in mind",
+    description: "Thoughtfully designed duplex – east-facing house (30 x 30).",
     image: "/pictures/home-3/img-1.jpg",
     images: [
       "/pictures/home-3/img-1.jpg",
-      "/pictures/home-3/img-1.jpg",
-      "/pictures/home-3/img-1.jpg",
+      "/pictures/home-3/img-3.jpg",
+      "/pictures/home-3/img-4.jpg",
+      "/pictures/home-3/img-5.jpg",
+      "/pictures/home-3/img-6.jpg",
+      "/pictures/home-3/img-7.jpg",
+      "/pictures/home-3/img-8.jpg",
+      "/pictures/home-3/img-9.jpg",
+      "/pictures/home-3/img-10.jpg",
+      "/pictures/home-3/img-11.jpg",
     ],
   },
-
   {
-    title: "Individual House  (1200 Sq. Ft.)",
+    title: "Individual House (1200 Sq. Ft.)",
     category: "Residential",
     description:
-      "Modern living spaces crafted with precision and sustainability in mind",
+      "Elegant design with modern features – south-facing house (20 x 60).",
     image: "/pictures/home-4/img-1.jpg",
     images: [
       "/pictures/home-4/img-1.jpg",
@@ -259,12 +522,10 @@ export const ProjectPageCardItems = [
     ],
   },
   {
-    title: "Individual House  (1200 Sq. Ft.)",
+    title: "Individual House (1440 Sq. Ft.)",
     category: "Residential",
-    description:
-      "Modern living spaces crafted with precision and sustainability in mind",
+    description: "Spacious and stylish home – east-facing house (20 x 72).",
     image: "/pictures/home-5/img-1.jpg",
-
     images: [
       "/pictures/home-5/img-1.jpg",
       "/pictures/home-5/img-3.jpg",
@@ -284,10 +545,10 @@ export const ProjectPageCardItems = [
     ],
   },
   {
-    title: "Individual House  (1200 Sq. Ft.)",
+    title: "Individual House (1200 Sq. Ft.)",
     category: "Residential",
     description:
-      "Modern living spaces crafted with precision and sustainability in mind",
+      "Comfortable and well-planned home – south-facing house (20 x 60).",
     image: "/pictures/home-6/img-1.jpg",
     images: [
       "/pictures/home-6/img-1.jpg",
@@ -295,12 +556,11 @@ export const ProjectPageCardItems = [
       "/pictures/home-6/img-1.jpg",
     ],
   },
-
   {
-    title: "Individual House  (1200 Sq. Ft.)",
+    title: "Individual House (1200 Sq. Ft.)",
     category: "Residential",
     description:
-      "Modern living spaces crafted with precision and sustainability in mind",
+      "Modern house with smart design – northwest-facing house (20 x 60).",
     image: "/pictures/home-7/img-1.jpg",
     images: [
       "/pictures/home-7/img-1.jpg",
@@ -321,10 +581,10 @@ export const ProjectPageCardItems = [
     ],
   },
   {
-    title: "Individual House  (1200 Sq. Ft.)",
+    title: "Individual House (1200 Sq. Ft.)",
     category: "Residential",
     description:
-      "Modern living spaces crafted with precision and sustainability in mind",
+      "Sleek and energy-efficient home – south-facing house (20 x 60).",
     image: "/pictures/home-8/img-1.JPG",
     images: [
       "/pictures/home-8/img-1.jpg",
@@ -335,10 +595,10 @@ export const ProjectPageCardItems = [
     ],
   },
   {
-    title: "Spacious 3-Floor Apartment (1200 Sq. Ft.)",
+    title: "Spacious 3-Floor G+2 (2000 Sq. Ft.)",
     category: "Commercial",
     description:
-      "Innovative structural solutions for complex architectural challenges",
+      "Structural excellence for commercial needs – west-facing G+2.",
     image: "/pictures/home-9/img-1.jpg",
     images: [
       "/pictures/home-9/img-1.jpg",
@@ -346,19 +606,42 @@ export const ProjectPageCardItems = [
       "/pictures/home-9/img-3.jpg",
     ],
   },
+  {
+    title: "Individual House - duplex house (900 Sq. Ft.)",
+    category: "Residential",
+    description:
+      "Smart duplex with modern features – northeast-facing house (30 x 30).",
+    image: "/pictures/home-11/img-1.jpg",
+    images: ["/pictures/home-11/img-1.jpg", "/pictures/home-11/img-2.jpg"],
+  },
+  {
+    title: "Individual House (1200 Sq. Ft.)",
+    category: "Residential",
+    description: "Classic and functional home – west-facing house (20 x 60).",
+    image: "/pictures/home-12/img-1.jpg",
+    images: ["/pictures/home-12/img-1.jpg", "/pictures/home-12/img-2.jpg"],
+  },
+  {
+    title: "Individual House (1200 Sq. Ft.)",
+    category: "Residential",
+    description:
+      "Charming home with aesthetic appeal – southwest-facing house (20 x 60).",
+    image: "/pictures/home-13/img-1.jpg",
+    images: ["/pictures/home-13/img-1.jpg", "/pictures/home-13/img-2.png"],
+  },
 ];
 
 export const whyGo = [
   {
     title: "Comprehensive Expertise",
     description:
-      "No matter the project&apos;s scope or size, we&apos;ve got the skills, tools, and experience to deliver exceptional results.",
+      "No matter the project's scope or size, we've got the skills, tools, and experience to deliver exceptional results.",
     icon: "🏗️",
   },
   {
     title: "Quality & Precision",
     description:
-      "We&apos;re committed to maintaining the highest standards of craftsmanship and attention to detail.",
+      "We're committed to maintaining the highest standards of craftsmanship and attention to detail.",
     icon: "✨",
   },
   {

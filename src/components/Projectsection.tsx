@@ -15,7 +15,8 @@ export default function ProjectSection() {
   return (
     <section
       className="h-[500vh] relative bg-gradient-to-b from-white to-gray-50"
-      ref={targetRef}>
+      ref={targetRef}
+      aria-labelledby="our-projects">
       <div className="h-screen sticky top-0 flex items-center overflow-hidden">
         {/* Header Content */}
         <div
@@ -39,6 +40,7 @@ export default function ProjectSection() {
             </div>
 
             <h2
+              id="our-projects"
               className="text-2xl md:max-w-xs lg:max-w-lg xl:max-w-2xl  md:text-2xl lg:text-4xl xl:text-5xl font-bold text-gray-900 
               leading-tight">
               Crafting Exceptional Spaces Through Innovative Construction

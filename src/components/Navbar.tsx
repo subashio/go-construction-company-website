@@ -4,6 +4,7 @@ import { navLinks } from "@/constants/common";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -16,7 +17,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
-import Image from "next/image";
 
 export default function Navbar({
   textColor,
@@ -66,13 +66,14 @@ export default function Navbar({
       {/* Top Header for Daily Updates */}
       {!isScrolled && isHomePage && (
         <div
+          role="banner"
           className={cn(
             "w-full bg-black/50 backdrop-blur-xl text-white text-sm font-medium p-2",
             "flex items-center justify-center overflow-hidden"
           )}>
           <div className="overflow-hidden whitespace-nowrap">
             <motion.div
-              className="flex gap-2 z-30 animate-marquee sm:animate-marquee-fast hover:animate-marquee-paused"
+              className="flex gap-2 z-30 "
               animate={{
                 x: isHovered ? "50" : "-100%", // Pause at the start (0) when hovered
               }}
@@ -136,39 +137,29 @@ export default function Navbar({
                 </span>
                 or visit our website!
               </p>
-              <p className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 bg-clip-text text-transparent animate-gradient">
-                ⭐ Daily Updates: Amazing houses for sale! Contact us today for
-                the best deals. Contact us
-                <span className="mx-2 text-white/80">
-                  <Link href="/Contact" className="hover:underline">
-                    Click Here
-                  </Link>
-                </span>
-                or visit our website!
-              </p>
             </motion.div>
           </div>
         </div>
       )}
 
-      <MaxWidthWrapper className="flex items-center h-20 justify-between">
+      <MaxWidthWrapper className="flex items-center h-20 w-full justify-between">
         {isScrolled ? (
           <Link href="/">
             <Image
-              width={197}
-              height={59}
+              width={726}
+              height={268}
               src="/logos/dark-logo.png"
-              className="h-14 transition-transform duration-300 hover:scale-105"
+              className="h-20 w-full transition-transform duration-300 hover:scale-105"
               alt="Go-construction logo image"
             />
           </Link>
         ) : (
           <Link href="/">
             <Image
-              width={197}
-              height={59}
+              width={726}
+              height={268}
               src={image || "/logos/logo.png"}
-              className="h-14 transition-transform duration-300 hover:scale-105"
+              className="h-20 w-full transition-transform duration-300 hover:scale-105"
               alt="Go-construction logo image"
             />
           </Link>
@@ -235,7 +226,7 @@ export default function Navbar({
               ))}
             </SheetHeader>
             <div className="border-t flex flex-col items-center gap-6 py-8 mt-4">
-              <h1 className="text-xl font-bold">Ready to work together?</h1>
+              <h2 className="text-xl font-bold">Ready to work together?</h2>
               <Link
                 href="/Contact"
                 className="flex items-center h-10 px-6 bg-gradient-to-r from-red-900 to-red-700 text-white hover:bg-red-800 hover:scale-105 transition-all duration-300 rounded-full shadow-md">

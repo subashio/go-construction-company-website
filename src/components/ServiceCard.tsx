@@ -24,14 +24,16 @@ export default function ServiceCard({
         <Image
           src={image}
           width={400}
-          height={100}
-          className="w-full object-contain  object-center rounded-t-lg"
-          alt="Services card image for Go-construction"
+          height={228}
+          className="w-full  object-cover  object-center rounded-t-lg"
+          alt={`Go-construction services showcasing ${title}`}
         />
       </CardHeader>
       <CardContent className="flex flex-col mt-4 text-center  gap-y-4 items-center">
-        <CardTitle className="font-bold capitalize">{title}</CardTitle>
-        <CardDescription className="max-w-sm  ">{description}</CardDescription>
+        <CardTitle className="font-bold text-xl  capitalize">{title}</CardTitle>
+        <CardDescription className="max-w-xs  text-sm  leading-relaxed">
+          {description}
+        </CardDescription>
       </CardContent>
     </Card>
   );

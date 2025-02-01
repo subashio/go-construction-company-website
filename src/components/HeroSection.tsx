@@ -53,32 +53,13 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full h-screen">
+    <section
+      className="relative w-full h-screen"
+      aria-labelledby="hero-section">
       {/* HeroSliders */}
       <div className="absolute inset-0  bg-black/50 opacity-70 z-20" />
       <div className="overflow-hidden  relative h-full">
         <AnimatePresence>
-          {/* <motion.img
-            key={heroSliders[currentSlide].id}
-            src={heroSliders[currentSlide].image}
-            alt={heroSliders[currentSlide].name}
-            className="absolute top-0 left-0 w-full h-full object-cover"
-            initial={{
-              scale: 1, // Start at the original size
-            }}
-            animate={
-              isPlaying
-                ? { scale: 1.1 } // Gradually zoom in slightly when playing
-                : { scale: 1 } // Keep the scale fixed when paused
-            }
-            transition={{
-              duration: 8, // Slow zoom effect over 8 seconds
-              ease: "easeInOut",
-              repeat: isPlaying ? Infinity : 0, // Loop indefinitely only if playing
-              repeatType: "reverse",
-              // Smoothly reverse back to the original scale
-            }}
-          /> */}
           <motion.div
             key={heroSliders[currentSlide].id}
             initial={{ scale: 1 }}
@@ -92,7 +73,7 @@ export default function HeroSection() {
             className="absolute top-0 left-0 w-full h-full">
             <Image
               src={heroSliders[currentSlide].image}
-              alt={heroSliders[currentSlide].name}
+              alt={`Hero image for ${heroSliders[currentSlide].title} project`}
               fill
               priority
               className="object-cover"
@@ -110,7 +91,9 @@ export default function HeroSection() {
             key={`content-${heroSliders[currentSlide].id}`}
             className="flex flex-col gap-6 justify-center items-start min-h-screen w-full">
             <BoxReveal boxColor="#ffffff" duration={0.4}>
-              <h1 className="font-bold text-5xl sm:text-7xl  max-w-screen-sm leading-snug text-white w-full">
+              <h1
+                id="hero-section"
+                className="font-bold text-5xl sm:text-7xl  max-w-screen-sm leading-snug text-white w-full">
                 {heroSliders[currentSlide].title}
               </h1>
             </BoxReveal>
@@ -120,9 +103,6 @@ export default function HeroSection() {
               </p>
             </BoxReveal>
             <BoxReveal boxColor="#ffffff" duration={0.4}>
-              {/* <Button variant="secondary" className="mr-auto z-30">
-                See Our Works
-              </Button> */}
               <Link
                 href="/Project"
                 className=" group inline-flex  items-center bg-gradient-to-r from-orange-900 to-orange-700 text-white px-6 py-3 rounded-full
@@ -141,6 +121,7 @@ export default function HeroSection() {
         {/* Arrows for smaller screens */}
         <div className="flex justify-between mb-4 w-full lg:hidden">
           <button
+            aria-label="Previous slide"
             className="block lg:hidden p-4 rounded-full text-white"
             onClick={() =>
               goToSlide(
@@ -150,6 +131,7 @@ export default function HeroSection() {
             <ChevronLeft className="w-8 h-8" /> {/* Left Arrow */}
           </button>
           <button
+            aria-label="Next slide"
             className="block lg:hidden p-4 rounded-full text-white"
             onClick={() => goToSlide((currentSlide + 1) % heroSliders.length)}>
             <ChevronRight className="w-8 h-8" /> {/* Right Arrow */}
@@ -186,7 +168,12 @@ export default function HeroSection() {
           {/* Circular Progress */}
           <svg
             className="absolute top-0 left-0 w-full h-full"
-            viewBox="0 0 36 36">
+            viewBox="0 0 36 36"
+            role="progressbar"
+            aria-label="Slide progress"
+            aria-valuemax={100}
+            aria-valuemin={0}
+            aria-valuenow={progress}>
             {/* Background Circle */}
             <circle
               cx="18"

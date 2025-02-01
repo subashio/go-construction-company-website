@@ -14,7 +14,10 @@ export default function ServiceSection() {
   return (
     <section className="relative bg-fixed flex flex-col my-10 items-center  justify-center w-full py-24 bg-gradient-to-b  from-white to-[#1600000c]">
       {/* Background Image with Opacity */}
-      <div className="absolute  inset-0 bg-[url('/pictures/servicesBg.png')]  bg-cover bg-no-repeat bg-top "></div>
+      <div
+        className="absolute  inset-0 bg-[url('/pictures/servicesBg.png')]  bg-cover bg-no-repeat bg-top "
+        role="img"
+        aria-label="Services section background showcasing modern homes and construction projects"></div>
       <div className="absolute inset-0 pointer-events-none"> </div>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -34,9 +37,9 @@ export default function ServiceSection() {
           What We Offer
         </h2>
         <p className="max-w-2xl mx-auto text-gray-600 leading-relaxed">
-          Successfully delivering personalized housing solutions, we have earned
-          a reputation for excellence through exceptional craftsmanship, timely
-          execution, and client satisfaction.
+          Providing personalized housing solutions with exceptional
+          craftsmanship, timely delivery, and a commitment to client
+          satisfaction.
         </p>
       </motion.div>
 
@@ -49,7 +52,7 @@ export default function ServiceSection() {
           {ServicesCarouselItem.map((item, index) => (
             <CarouselItem
               key={index}
-              className="flex-shrink-0 w-[400px] basis-[90%] sm:basis-1/2 md:basis-[40%] lg:basis-[38%] xl:basis-[26%] ">
+              className="flex-shrink-0 w-[400px] basis-[90%] sm:basis-[60%] md:basis-1/2  lg:basis-[40%] xl:basis-[28%] ">
               <ServiceCard
                 title={item.title}
                 description={item.description}

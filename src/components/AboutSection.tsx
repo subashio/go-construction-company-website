@@ -6,7 +6,9 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section
+      className="relative py-20 overflow-hidden"
+      aria-labelledby="about-us">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-0 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
@@ -35,7 +37,9 @@ export default function AboutSection() {
                 </span>
               </div>
 
-              <h2 className="text-4xl xl:text-5xl font-bold leading-tight bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              <h2
+                id="about-us"
+                className="text-4xl xl:text-5xl font-bold leading-tight bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
                 Crafting Excellence in Every Home
               </h2>
 
@@ -84,7 +88,7 @@ export default function AboutSection() {
                 width={612}
                 height={479}
                 src="/pictures/about-img.png"
-                alt="About Go-construction"
+                alt="Go-Construction - Building custom homes, villas, and high-quality construction projects"
                 className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
               />
               {/* Overlay Gradient */}

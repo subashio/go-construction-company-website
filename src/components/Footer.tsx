@@ -7,7 +7,8 @@ import Image from "next/image";
 
 const socialIcons = [
   {
-    href: "#",
+    href: "https://x.com/i/flow/login?redirect_after_login=%2FGoconstruct_42",
+    label: "Follow us on Twitter",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -17,13 +18,15 @@ const socialIcons = [
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
-        strokeLinejoin="round">
+        strokeLinejoin="round"
+        aria-hidden="true">
         <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
       </svg>
     ),
   },
   {
-    href: "#",
+    href: "https://www.instagram.com/go_construction_?igsh=MTB1Zmg5NTY4amt1eA==",
+    label: "Follow us on Instagram",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +36,8 @@ const socialIcons = [
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
-        strokeLinejoin="round">
+        strokeLinejoin="round"
+        aria-hidden="true">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -41,7 +45,8 @@ const socialIcons = [
     ),
   },
   {
-    href: "#",
+    href: "https://www.facebook.com/profile.php?id=61572643353707&rdid=5b7k6gOC43Lu5wE5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BMLa8wF4Z%2F#",
+    label: "Like us on Facebook",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -51,36 +56,42 @@ const socialIcons = [
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
-        strokeLinejoin="round">
+        strokeLinejoin="round"
+        aria-hidden="true">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
       </svg>
     ),
   },
 ];
-
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-red-900 to-red-700 z-30  text-white pt-12">
       <MaxWidthWrapper className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
         {/* Company Logo and Description */}
-        <div className="md:col-span-1">
+        <section className="md:col-span-1">
           <Image
-            width={197}
-            height={59}
+            width={726}
+            height={268}
             src="/logos/logo.png"
             alt="Go-Construction Logo"
-            className="h-16 mb-4 -ml-3"
+            className="h-20 w-56 mb-4 -ml-3"
           />
           <p className="text-white text-sm border-b pb-6 max-w-sm">
-            Successfully delivering personalized housing solutions, we have
-            earned a reputation for excellence through exceptional
-            craftsmanship, timely execution, and client satisfaction.
+            Go Construction specializes in delivering top-quality housing
+            solutions, blending innovation, craftsmanship, and customer
+            satisfaction to redefine modern living.
           </p>
-        </div>
+        </section>
         {/* Footer Links */}
+
         {footerLinks.map((section, index) => (
-          <div key={index}>
-            <h4 className="text-lg font-semibold mb-4  pb-2">
+          <section
+            key={index}
+            aria-labelledby={`footer-section-${index}`}
+            className="mx-6">
+            <h4
+              id={`footer-section-${index}`}
+              className="text-lg font-semibold mb-4  pb-2">
               {section.title}
             </h4>
             <ul className="space-y-2">
@@ -99,7 +110,7 @@ export default function Footer() {
                     </span>
                   ) : (
                     <Link
-                      href={link.href || ""}
+                      href={link.href || "#"}
                       className="text-gray-50 hover:text-red-500 transition-colors">
                       {link.label}
                     </Link>
@@ -107,23 +118,26 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
         ))}
 
         {/* Social Media and Newsletter */}
-        <div className="md:col-span-1">
-          <h4 className="text-lg font-semibold mb-4   pb-2">Connect With Us</h4>
+        <section className="md:col-span-1" aria-labelledby="social-media">
+          <h4 id="social-media" className="text-lg font-semibold mb-4   pb-2">
+            Connect With Us
+          </h4>
           <div className="flex space-x-4 mb-4">
             {socialIcons.map((social, index) => (
               <Link
                 key={index}
                 href={social.href}
-                className="text-gray-50 hover:text-red-500 transition-colors">
+                className="text-gray-50 hover:text-red-500 transition-colors"
+                aria-label={social.label}>
                 {social.icon}
               </Link>
             ))}
           </div>
-        </div>
+        </section>
       </MaxWidthWrapper>
 
       {/* Copyright */}
