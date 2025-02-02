@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   ),
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "ta_IN",
     url: process.env.NEXT_PUBLIC_BASE_URL! || "https://goconstruction.in",
     title,
     description,
