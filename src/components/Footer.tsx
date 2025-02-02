@@ -1,9 +1,8 @@
 "use client";
-// import { footerLinks } from "@/constants/common";
-import Link from "next/link";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import { footerLinks } from "@/constants/common";
 import Image from "next/image";
+import Link from "next/link";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const socialIcons = [
   {
@@ -68,7 +67,7 @@ export default function Footer() {
     <footer className="bg-gradient-to-r from-red-900 to-red-700 z-30  text-white pt-12">
       <MaxWidthWrapper className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
         {/* Company Logo and Description */}
-        <section className="md:col-span-1">
+        <section className="md:col-span-1 mx-6">
           <Image
             width={726}
             height={268}
@@ -94,9 +93,9 @@ export default function Footer() {
               className="text-lg font-semibold mb-4  pb-2">
               {section.title}
             </h4>
-            <ul className="space-y-2">
+            <nav className="space-y-2">
               {section.links.map((link, linkIndex) => (
-                <li key={linkIndex}>
+                <div key={linkIndex}>
                   {link.isMultiple ? (
                     <span className="flex gap-1 flex-wrap">
                       {link.labels.map((subLink, subIndex) => (
@@ -115,18 +114,18 @@ export default function Footer() {
                       {link.label}
                     </Link>
                   )}
-                </li>
+                </div>
               ))}
-            </ul>
+            </nav>
           </section>
         ))}
 
         {/* Social Media and Newsletter */}
-        <section className="md:col-span-1" aria-labelledby="social-media">
+        <section className="md:col-span-1 mx-6" aria-labelledby="social-media">
           <h4 id="social-media" className="text-lg font-semibold mb-4   pb-2">
             Connect With Us
           </h4>
-          <div className="flex space-x-4 mb-4">
+          <nav className="flex space-x-4 mb-4">
             {socialIcons.map((social, index) => (
               <Link
                 key={index}
@@ -136,7 +135,7 @@ export default function Footer() {
                 {social.icon}
               </Link>
             ))}
-          </div>
+          </nav>
         </section>
       </MaxWidthWrapper>
 

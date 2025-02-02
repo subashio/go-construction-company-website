@@ -16,7 +16,6 @@ import { useToast } from "@/hooks/use-toast";
 import { sendContactForm } from "@/lib/api";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Building2, Loader, Mail, Phone } from "lucide-react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -98,168 +97,157 @@ export default function Contact() {
     }
   }
   return (
-    <>
-      <Head>
-        <title>Contact Us | Go-Construction</title>
-        <meta
-          name="description"
-          content="Get in touch with Go-Construction for all your building needs. Reach out via email, phone, or visit our office."
-        />
-      </Head>
-      <section className="scroll-mt-52">
-        <div className=" mx-auto bg-slate-50  w-full    pb-20 pt-6 gap-10">
-          <MaxWidthWrapper className=" grid lg:grid-cols-2     relative gap-10  ">
-            <div className=" h-full w-full  ">
-              <Image
-                height={4739}
-                width={3349}
-                className="h-[50vh] md:h-[80vh] w-full rounded-xl object-center object-cover"
-                src="/pictures/contact-img-2.jpg"
-                alt="Contact Go-Construction"
-              />
-            </div>
-            <div className="z-30  ">
-              <h1 className="text-4xl lg:text-5xl mb-4 font-bold">
-                Let&apos;s Get In Touch.
-              </h1>
-              <p className="text-sm mb-10">
-                Or just reach out manually to
-                <span className="text-blue-700 px-1">
-                  <Link href="mailto:info@goconstruction.in">
-                    info@goconstruction.in
-                  </Link>
-                </span>
-              </p>
-              <Form {...form}>
-                <form
-                  className="mt-6 flex flex-col  gap-4"
-                  onSubmit={form.handleSubmit(onSubmit)}>
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input
-                            className="mb-4 h-12"
-                            placeholder="Enter Name"
-                            {...field}
-                          />
-                        </FormControl>
+    <section className="scroll-mt-52">
+      <div className=" mx-auto bg-slate-50  w-full    pb-20 pt-6 gap-10">
+        <MaxWidthWrapper className=" grid lg:grid-cols-2     relative gap-10  ">
+          <div className=" h-full w-full  ">
+            <Image
+              height={4739}
+              width={3349}
+              className="h-[50vh] md:h-[80vh] w-full rounded-xl object-center object-cover"
+              src="/pictures/contact-img-2.jpg"
+              alt="Contact Go-Construction"
+            />
+          </div>
+          <div className="z-30  ">
+            <h1 className="text-4xl lg:text-5xl mb-4 font-bold">
+              Let&apos;s Get In Touch.
+            </h1>
+            <p className="text-sm mb-10">
+              Or just reach out manually to
+              <span className="text-blue-700 px-1">
+                <Link href="mailto:info@goconstruction.in">
+                  info@goconstruction.in
+                </Link>
+              </span>
+            </p>
+            <Form {...form}>
+              <form
+                className="mt-6 flex flex-col  gap-4"
+                onSubmit={form.handleSubmit(onSubmit)}>
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          className="mb-4 h-12"
+                          placeholder="Enter Name"
+                          {...field}
+                        />
+                      </FormControl>
 
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem className="flex flex-col items-start">
-                        <FormLabel className="text-left">
-                          Phone Number
-                        </FormLabel>
-                        <FormControl className="w-full">
-                          <PhoneInput
-                            placeholder="Enter a phone number"
-                            {...field}
-                          />
-                        </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col items-start">
+                      <FormLabel className="text-left">Phone Number</FormLabel>
+                      <FormControl className="w-full">
+                        <PhoneInput
+                          placeholder="Enter a phone number"
+                          {...field}
+                        />
+                      </FormControl>
 
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input
-                            className="mb-4 h-12"
-                            placeholder="Enter Email"
-                            {...field}
-                          />
-                        </FormControl>
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          className="mb-4 h-12"
+                          placeholder="Enter Email"
+                          {...field}
+                        />
+                      </FormControl>
 
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Tell us a little bit about yourself"
-                            className="h-44 resize-none"
-                            {...field}
-                          />
-                        </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Tell us a little bit about yourself"
+                          className="h-44 resize-none"
+                          {...field}
+                        />
+                      </FormControl>
 
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button
-                    disabled={form.formState.isSubmitting}
-                    type="submit"
-                    className="group mt-6 bg-gradient-to-r from-red-900 to-red-700  hover:bg-red-800 rounded-full inline-flex h-14 w-full cursor-pointer place-content-center justify-center gap-2    px-5 py-3 text-center text-md font-medium   transition duration-500">
-                    Submit Form
-                    {form.formState.isSubmitting && (
-                      <Loader className="ml-2 h-6 w-6 animate-spin" />
-                    )}
-                  </Button>
-                </form>
-              </Form>
-            </div>
-          </MaxWidthWrapper>
-        </div>
-        <MaxWidthWrapper className="w-full flex flex-col items-center my-10">
-          <h1 className="text-3xl md:text-4xl mb-2 font-bold">
-            We&apos;d Love to Hear From You.
-          </h1>
-          <p className="text-sm">
-            Or just reach out manually to
-            <span className="text-blue-700 px-1">
-              <Link href="mailto:info@goconstruction.in">
-                info@goconstruction.in
-              </Link>
-            </span>
-          </p>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 w-full p-4 mt-4 gap-10">
-            {ContactCardList.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col gap-2 items-start p-4 py-6 shadow-md hover:shadow-xl cursor-pointer rounded-lg">
-                <div className="bg-yellow-200/50 rounded-full p-2">
-                  {item.icon}
-                </div>
-                <div className=" flex flex-col gap-1">
-                  <h1 className="font-bold text-lg">{item.title}</h1>
-                  <p>{item.description}</p>
-                </div>
-                {/* Conditionally render either a <Link> or a normal <p> */}
-                {typeof item.info === "string" ? (
-                  <Link href={item.href} className="text-sm text-blue-700">
-                    {item.info}
-                  </Link>
-                ) : (
-                  item.info // This will render the <p> for phone numbers correctly
-                )}
-              </div>
-            ))}
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  disabled={form.formState.isSubmitting}
+                  type="submit"
+                  className="group mt-6 bg-gradient-to-r from-red-900 to-red-700  hover:bg-red-800 rounded-full inline-flex h-14 w-full cursor-pointer place-content-center justify-center gap-2    px-5 py-3 text-center text-md font-medium   transition duration-500">
+                  Submit Form
+                  {form.formState.isSubmitting && (
+                    <Loader className="ml-2 h-6 w-6 animate-spin" />
+                  )}
+                </Button>
+              </form>
+            </Form>
           </div>
         </MaxWidthWrapper>
-      </section>
-    </>
+      </div>
+      <MaxWidthWrapper className="w-full flex flex-col items-center my-10">
+        <h1 className="text-3xl md:text-4xl mb-2 font-bold">
+          We&apos;d Love to Hear From You.
+        </h1>
+        <p className="text-sm">
+          Or just reach out manually to
+          <span className="text-blue-700 px-1">
+            <Link href="mailto:info@goconstruction.in">
+              info@goconstruction.in
+            </Link>
+          </span>
+        </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 w-full p-4 mt-4 gap-10">
+          {ContactCardList.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col gap-2 items-start p-4 py-6 shadow-md hover:shadow-xl cursor-pointer rounded-lg">
+              <div className="bg-yellow-200/50 rounded-full p-2">
+                {item.icon}
+              </div>
+              <div className=" flex flex-col gap-1">
+                <h1 className="font-bold text-lg">{item.title}</h1>
+                <p>{item.description}</p>
+              </div>
+              {/* Conditionally render either a <Link> or a normal <p> */}
+              {typeof item.info === "string" ? (
+                <Link href={item.href} className="text-sm text-blue-700">
+                  {item.info}
+                </Link>
+              ) : (
+                item.info // This will render the <p> for phone numbers correctly
+              )}
+            </div>
+          ))}
+        </div>
+      </MaxWidthWrapper>
+    </section>
   );
 }

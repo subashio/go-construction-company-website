@@ -10,13 +10,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { buttonVariants } from "./ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "./ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 
 export default function Navbar({
   textColor,
@@ -165,13 +159,13 @@ export default function Navbar({
           </Link>
         )}
         {/* Desktop Navigation */}
-        <ul
+        <nav
           className={cn(
             "md:flex hidden font-semibold items-center h-full gap-6 ",
             isScrolled ? "text-black" : textColor
           )}>
           {navLinks.map((link, index) => (
-            <li key={index} className="group relative">
+            <div key={index} className="group relative">
               <Link
                 href={link.href}
                 className={cn(
@@ -180,7 +174,7 @@ export default function Navbar({
                 )}>
                 {link.name}
               </Link>
-            </li>
+            </div>
           ))}
           <Link
             href="/Contact"
@@ -193,7 +187,7 @@ export default function Navbar({
             )}>
             Contact Us
           </Link>
-        </ul>
+        </nav>
 
         {/* Mobile Navigation */}
         <Sheet>
@@ -214,15 +208,15 @@ export default function Navbar({
             />
             <SheetHeader className="flex flex-col font-semibold  px-2 gap-2 text-black">
               {navLinks.map((link, index) => (
-                <SheetTitle
+                <nav
                   key={index}
                   className="w-full hover:bg-orange-50/50 rounded-md group py-2 transition-all duration-300">
                   <Link
                     href={link.href}
-                    className="w-full  flex text-black mx-2 justify-center group-hover:text-orange-400 transition-all duration-300">
+                    className="w-full text-lg flex text-black mx-2 justify-center group-hover:text-orange-400 transition-all duration-300">
                     {link.name}
                   </Link>
-                </SheetTitle>
+                </nav>
               ))}
             </SheetHeader>
             <div className="border-t flex flex-col items-center gap-6 py-8 mt-4">

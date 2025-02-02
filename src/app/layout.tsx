@@ -1,9 +1,10 @@
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
+import { description, title } from "@/constants/common";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({
   weight: ["300", "400", "500", "700", "900"],
@@ -13,56 +14,59 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Go-Construction | Build Your Dream Home with Experts",
-  description:
-    "Go-Construction specializes in building individual houses, villas, and dream homes. Explore houses for sale and professional construction services tailored to your needs.",
+  title: {
+    default: `${title} | Build Your Dream Home with Experts`,
+    template: `%s | ${title}`,
+  },
   authors: [{ name: "Subash", url: "https://github.com/subashio" }],
+  description,
   keywords: [
     "Go-Construction",
     "Go-Construction company",
-    "Go-Construction co",
     "Construction Company",
-    "Construction",
-    "puducherry construction company",
-    "tamil nadu construction Company",
-    "tamil nadu construction solutions",
-    "puducherry construction solutions",
-    "Construction puducherry",
-    "go construction individual house",
-    "go construction villa construction",
-    "houses for sale in pondicherry",
-    "construction company in tindivanam",
-    "construction company in chennai",
-    "construction company in ",
-    "houses for sale ",
-    "individual houses",
-    "independent houses",
-    "individual homes",
-    "independent homes",
-    "independent homes for sale",
-    "independent homes go construction",
-    "individual houses for sale",
-    "individual houses go construction",
-    "villa construction",
-    "custom home builders",
-    "go-construct",
-    "real estate company",
-    "construction company",
-    "new house for sale in pondicherry 60 lakhs",
-    "new house for sale in pondicherry 40 lakhs",
-    "new house for sale in pondicherry 20 lakhs",
-    "home builders",
-    "dream home",
+    "Puducherry construction company",
+    "Tamil Nadu construction solutions",
+    "House builders in Tamil Nadu",
+    "Villa construction in Pondicherry",
+    "Affordable homes in Chennai",
+    "Independent homes for sale",
+    "Custom home builders",
+    "Dream home",
+    "Real estate company",
+    "New house for sale in Pondicherry 60 lakhs",
+    "New house for sale in Pondicherry 40 lakhs",
+    "New house for sale in Pondicherry 20 lakhs",
   ],
-  robots: {
-    index: true,
-    follow: true,
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL! || "https://goconstruction.in"
+  ),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: process.env.NEXT_PUBLIC_BASE_URL! || "https://goconstruction.in",
+    title,
+    description,
+    siteName: title,
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: title,
+        type: "image/png",
+      },
+    ],
   },
-  alternates: {
-    canonical: "https://goconstruction.in",
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/opengraph-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
