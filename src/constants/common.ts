@@ -1,6 +1,6 @@
-export const title = "Go-Construction ";
+export const title = "Go Construction ";
 export const description =
-  "Go-Construction specializes in building individual houses, villas, and dream homes. Explore houses for sale and professional construction services tailored to your needs.";
+  "Go Construction specializes in building individual houses, villas, and dream homes. Explore houses for sale and professional construction services tailored to your needs.";
 
 export const navLinks = [
   {

@@ -88,7 +88,7 @@ export default function AboutSection() {
                 width={612}
                 height={479}
                 src="/pictures/about-img.png"
-                alt="Go-Construction - Building custom homes, villas, and high-quality construction projects"
+                alt="Go Construction - Building custom homes, villas, and high-quality construction projects"
                 className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
               />
               {/* Overlay Gradient */}

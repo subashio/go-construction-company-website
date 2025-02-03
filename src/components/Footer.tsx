@@ -72,7 +72,7 @@ export default function Footer() {
             width={726}
             height={268}
             src="/logos/logo.png"
-            alt="Go-Construction Logo"
+            alt="Go Construction Logo"
             className="h-20 w-56 mb-4 -ml-3"
           />
           <p className="text-white text-sm border-b pb-6 max-w-sm">

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us ",
   description:
-    "Get in touch with Go-Construction for all your building needs. Reach out via email, phone, or visit our office.",
+    "Get in touch with Go Construction for all your building needs. Reach out via email, phone, or visit our office.",
 };
 
 export default function layout({ children }: { children: React.ReactNode }) {

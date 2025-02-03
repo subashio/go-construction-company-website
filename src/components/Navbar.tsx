@@ -144,7 +144,7 @@ export default function Navbar({
               height={268}
               src="/logos/dark-logo.png"
               className="h-20 w-full transition-transform duration-300 hover:scale-105"
-              alt="Go-construction logo image"
+              alt="Go construction logo image"
             />
           </Link>
         ) : (
@@ -154,7 +154,7 @@ export default function Navbar({
               height={268}
               src={image || "/logos/logo.png"}
               className="h-20 w-full transition-transform duration-300 hover:scale-105"
-              alt="Go-construction logo image"
+              alt="Go construction logo image"
             />
           </Link>
         )}
@@ -204,7 +204,7 @@ export default function Navbar({
               height={59}
               src="/logos/dark-logo.png"
               className="mb-8 h-14 mt-4"
-              alt="Go-construction logo image"
+              alt="Go construction logo image"
             />
             <SheetHeader className="flex flex-col font-semibold  px-2 gap-2 text-black">
               {navLinks.map((link, index) => (

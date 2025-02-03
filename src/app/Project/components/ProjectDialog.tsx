@@ -137,7 +137,7 @@ export const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   width={1200}
                   height={1600}
                   src={images[imageIndex]}
-                  alt={`Go-construction ${project.title} - Image ${
+                  alt={`Go construction ${project.title} - Image ${
                     imageIndex + 1
                   }`}
                   className="h-full w-full object-contain pointer-events-none"

@@ -55,7 +55,7 @@ export default function Project() {
                   width={1200}
                   height={1600}
                   src={project.image}
-                  alt={`Go-construction ${project.title} - Image ${index + 1}`}
+                  alt={`Go construction ${project.title} - Image ${index + 1}`}
                   className="w-full h-full object-center  transition-transform duration-700
                     group-hover:scale-110"
                 />

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = FontSans({
   weight: ["300", "400", "500", "700", "900"],
@@ -21,18 +22,21 @@ export const metadata: Metadata = {
   authors: [{ name: "Subash", url: "https://github.com/subashio" }],
   description,
   keywords: [
-    "Go-Construction",
-    "Go-Construction company",
+    "Go Construction",
+    "Go Construction company",
     "Construction Company",
-    "Puducherry construction company",
-    "Tamil Nadu construction solutions",
+    "Pondicherry construction company",
+    "best construction company in chennai",
+    "construction company chennai",
     "House builders in Tamil Nadu",
     "Villa construction in Pondicherry",
     "Affordable homes in Chennai",
     "Independent homes for sale",
     "Custom home builders",
-    "Dream home",
-    "Real estate company",
+    "house construction",
+    "builders pondicherry",
+    "renovation work",
+    "renovation contractor",
     "New house for sale in Pondicherry 60 lakhs",
     "New house for sale in Pondicherry 40 lakhs",
     "New house for sale in Pondicherry 20 lakhs",
@@ -81,6 +85,7 @@ export default function RootLayout({
         )}>
         <main className="relative flex min-h-screen flex-col bg-cover bg-no-repeat">
           {children}
+          <Analytics />
           <Toaster />
           <Footer />
         </main>

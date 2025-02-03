@@ -106,7 +106,7 @@ export default function Contact() {
               width={3349}
               className="h-[50vh] md:h-[80vh] w-full rounded-xl object-center object-cover"
               src="/pictures/contact-img-2.jpg"
-              alt="Contact Go-Construction"
+              alt="Contact Go Construction"
             />
           </div>
           <div className="z-30  ">

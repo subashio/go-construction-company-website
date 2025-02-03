@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Projects",
   description:
-    "Explore Go-Construction's featured projects showcasing excellence in construction and innovation. See our portfolio of successful projects.",
+    "Explore Go Construction's featured projects showcasing excellence in construction and innovation. See our portfolio of successful projects.",
   keywords: [
     "construction projects",
     "building projects",

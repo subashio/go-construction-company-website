@@ -25,7 +25,7 @@ export default function ProjectCard({
           src={image}
           fill
           priority
-          alt={`Go-construction project showcasing ${title} in the category of ${category}`}
+          alt={`Go construction project showcasing ${title} in the category of ${category}`}
           className="w-full h-full object-center  transition-transform duration-700
           group-hover:scale-110"
         />
